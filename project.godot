@@ -38,6 +38,10 @@ walk_right={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_2="attachedBodies"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

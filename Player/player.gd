@@ -5,18 +5,13 @@ extends ThingCollector
 @export var Acceleration : float = 10
 var MoveVector : Vector2 = Vector2.ZERO
 
-func _ready() -> void:
-	pass # Replace with function body.
-
-func _process(delta: float) -> void:
-	pass
-
 func _input(event: InputEvent) -> void:
 	var moveVectX : float = Input.get_axis("walk_left", "walk_right")
 	var moveVectY : float = Input.get_axis("walk_backwards", "walk_forwards")
 	MoveVector = Vector2(moveVectX, moveVectY)
 
 func _physics_process(delta: float) -> void:
+	super(delta)
 	var camForward = Camera.global_basis * Vector3(0,0,-1)
 	var camForwardPlanar = camForward - camForward.project(Vector3.UP)
 	var globalVect : Vector3 = Basis().looking_at(camForwardPlanar) * Vector3(MoveVector.x, 0, -MoveVector.y)
