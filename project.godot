@@ -43,6 +43,10 @@ walk_right={
 3d_physics/layer_2="attachedBodies"
 3d_physics/layer_3="playerHurt"
 
+[physics]
+
+3d/default_gravity=39.2
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

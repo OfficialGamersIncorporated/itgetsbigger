@@ -6,10 +6,14 @@ class_name ThingCollector
 @onready var collectedProps : Node3D = $CollectedProps
 
 @onready var CurrentVolume : float = 4
+@export var DamageKnockback : float = 4
+@export var PropEjectKnockback : float = 16
 
+func CalculateRadiusFromVolume(volume : float):
+	return pow((volume * 3) / 4 * PI, 1.0 / 3.0)
+	
 func RecalculateScale():
-	# google's stupid ai says this is right so it must be true.
-	var radius = pow((CurrentVolume * 3) / 4 * PI, 1.0 / 3.0)
+	var radius = CalculateRadiusFromVolume(CurrentVolume)
 	
 	var newScale = Vector3.ONE * radius * 2
 	visual.scale = newScale
@@ -20,20 +24,31 @@ func IncrementVolume(deltaVolume : float):
 	CurrentVolume += deltaVolume
 	RecalculateScale()
 
-func ConsumeBody(other : Prop):
+func ConsumeProp(other : Prop):
 	var volume = other.Volume
 	IncrementVolume(volume)
 	other.reparent(collectedProps, true)
 	other.SetPassive(true)
+	
+	var toPropVector : Vector3 = other.global_position - global_position
+	toPropVector = toPropVector.clampf(0, CalculateRadiusFromVolume(CurrentVolume))
+	other.global_position = global_position + toPropVector
 
 func RemoveRandomProp():
 	var props = collectedProps.get_children()
 	var randomProp : Prop = props[randi() % props.size()]
 	randomProp.reparent(PropManager.Singleton, true)
 	randomProp.SetPassive(false)
+	
+	var toPropVector : Vector3 = randomProp.global_position - global_position
+	var radius = CalculateRadiusFromVolume(CurrentVolume) * 1.5
+	toPropVector = (toPropVector * Vector3(1, 0, 1)).normalized() * radius + Vector3.UP * radius
+	randomProp.apply_central_impulse((toPropVector.normalized().lerp(Vector3.UP, .5)) * PropEjectKnockback)
+	randomProp.global_position = global_position + toPropVector
+	
 	return randomProp
 
-func Damage(damagePercent : float):
+func Damage(damagePercent : float, damageOrigin : Vector3):
 	var modifier = (100 - damagePercent) / 100
 	var lostVolume = CurrentVolume * (1 - modifier)
 	CurrentVolume *= modifier
@@ -41,9 +56,11 @@ func Damage(damagePercent : float):
 	
 	var propCount = collectedProps.get_children().size()
 	var countToKill = ceil(propCount * (1 - modifier))
-	print(countToKill)
 	for i in countToKill:
-		RemoveRandomProp().Volume = lostVolume / countToKill
+		var prop = RemoveRandomProp()
+		prop.Volume = lostVolume / countToKill
+	
+	apply_central_impulse(-damageOrigin * DamageKnockback)
 
 func _ready() -> void:
 	CurrentVolume = (4/3) * PI * pow(.5, 3.0)
@@ -53,12 +70,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func  _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var bodies = get_colliding_bodies()
 	for body in bodies:
 		if body.get_collision_layer_value(3):
-			Damage(10)
+			var damageVect = body.global_position - global_position
+			Damage(10, damageVect)
 			return
 		
 		if not body.is_class("RigidBody3D"): continue
-		ConsumeBody(body)
+		ConsumeProp(body)
