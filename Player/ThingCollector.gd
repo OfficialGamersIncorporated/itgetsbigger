@@ -3,6 +3,7 @@ class_name ThingCollector
 
 @onready var visual : MeshInstance3D = $MeshInstance3D
 @onready var collisionShape : CollisionShape3D = $CollisionShape3D
+@onready var collectedProps : Node3D = $CollectedProps
 
 @onready var CurrentVolume : float = 4
 
@@ -19,17 +20,30 @@ func IncrementVolume(deltaVolume : float):
 	CurrentVolume += deltaVolume
 	RecalculateScale()
 
-func ConsumeBody(other : RigidBody3D):
-	var volume = PropManager.GetVolumeOfObject(other)
+func ConsumeBody(other : Prop):
+	var volume = other.Volume
 	IncrementVolume(volume)
-	other.reparent(self, true)
-	other.freeze_mode = RigidBody3D.FREEZE_MODE_STATIC
-	other.freeze = true
-	#other.set_collision_layer_value(2, true)
-	#other.set_collision_layer_value(1, false) # doesn't work.
-	for child in other.get_children(true):
-		if child.is_class("CollisionShape3D"):
-			child.free()
+	other.reparent(collectedProps, true)
+	other.SetPassive(true)
+
+func RemoveRandomProp():
+	var props = collectedProps.get_children()
+	var randomProp : Prop = props[randi() % props.size()]
+	randomProp.reparent(PropManager.Singleton, true)
+	randomProp.SetPassive(false)
+	return randomProp
+
+func Damage(damagePercent : float):
+	var modifier = (100 - damagePercent) / 100
+	var lostVolume = CurrentVolume * (1 - modifier)
+	CurrentVolume *= modifier
+	RecalculateScale()
+	
+	var propCount = collectedProps.get_children().size()
+	var countToKill = ceil(propCount * (1 - modifier))
+	print(countToKill)
+	for i in countToKill:
+		RemoveRandomProp().Volume = lostVolume / countToKill
 
 func _ready() -> void:
 	CurrentVolume = (4/3) * PI * pow(.5, 3.0)
@@ -42,5 +56,9 @@ func _process(delta: float) -> void:
 func  _physics_process(delta: float) -> void:
 	var bodies = get_colliding_bodies()
 	for body in bodies:
+		if body.get_collision_layer_value(3):
+			Damage(10)
+			return
+		
 		if not body.is_class("RigidBody3D"): continue
 		ConsumeBody(body)

@@ -41,6 +41,7 @@ walk_right={
 [layer_names]
 
 3d_physics/layer_2="attachedBodies"
+3d_physics/layer_3="playerHurt"
 
 [rendering]
 

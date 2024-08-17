@@ -1,9 +1,10 @@
-[gd_scene load_steps=60 format=4 uid="uid://c40hmw7e7i4lh"]
+[gd_scene load_steps=62 format=4 uid="uid://c40hmw7e7i4lh"]
 
 [ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_oq3vt"]
 [ext_resource type="Script" path="res://PropManager.gd" id="2_68uey"]
 [ext_resource type="Texture2D" uid="uid://gpb56tniej8x" path="res://Props/Desk/Apt Retro Desk color + AO.png" id="2_hnt0w"]
 [ext_resource type="Texture2D" uid="uid://3blfhr0ylplc" path="res://Props/Desk/Apt Retro Desk normal.png" id="3_3lmh2"]
+[ext_resource type="Script" path="res://Props/Prop.gd" id="3_4yobp"]
 [ext_resource type="Texture2D" uid="uid://bufghqwlkq6mc" path="res://Props/Chair/Apt Retro Chair color + AO.png" id="4_o02rh"]
 [ext_resource type="Texture2D" uid="uid://dqc062jyk2ev0" path="res://Props/Chair/Apt Retro Chair normal.png" id="5_ltgsh"]
 [ext_resource type="Texture2D" uid="uid://cy7y30fly4upq" path="res://Props/Blinds/Apt Plastic Blinds color.png" id="6_q46uk"]
@@ -18,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cakx30clhb15e" path="res://Props/Lamp/Apt Retro Lamp normal.png" id="15_gihqd"]
 [ext_resource type="Texture2D" uid="uid://btv3oipqd74sr" path="res://Props/Curtains/Apt Retro Curtains color + AO.png" id="16_2ur48"]
 [ext_resource type="Texture2D" uid="uid://ffvvlgkvwat6" path="res://Props/Curtains/Apt Retro Curtains normal.png" id="17_k86fg"]
+[ext_resource type="PackedScene" uid="uid://bgg86rqtdc0dq" path="res://Enemies/StaticEnemy.tscn" id="19_yxtpn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j07cq"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -459,6 +461,7 @@ script = ExtResource("2_68uey")
 
 [node name="Retro Desk" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 8)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Desk" type="MeshInstance3D" parent="Props/Retro Desk"]
 mesh = SubResource("ArrayMesh_322mn")
@@ -472,6 +475,7 @@ shape = SubResource("ConvexPolygonShape3D_btesc")
 
 [node name="Retro Chair" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Chair" type="MeshInstance3D" parent="Props/Retro Chair"]
 mesh = SubResource("ArrayMesh_8vyjx")
@@ -485,6 +489,7 @@ shape = SubResource("ConvexPolygonShape3D_gs2p6")
 
 [node name="Plastic Blinds" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 75.3455, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Plastic Blinds" type="MeshInstance3D" parent="Props/Plastic Blinds"]
 mesh = SubResource("ArrayMesh_l535o")
@@ -498,6 +503,7 @@ shape = SubResource("ConvexPolygonShape3D_50xij")
 
 [node name="Retro Bed" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Bed" type="MeshInstance3D" parent="Props/Retro Bed"]
 mesh = SubResource("ArrayMesh_7c3v4")
@@ -511,6 +517,7 @@ shape = SubResource("ConvexPolygonShape3D_dbtdh")
 
 [node name="Retro Nightstand" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Nightstand" type="MeshInstance3D" parent="Props/Retro Nightstand"]
 mesh = SubResource("ArrayMesh_hmbdk")
@@ -521,6 +528,7 @@ shape = SubResource("ConvexPolygonShape3D_cvyqs")
 
 [node name="Retro Filing Cabinet" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Filing Cabinet" type="MeshInstance3D" parent="Props/Retro Filing Cabinet"]
 mesh = SubResource("ArrayMesh_7gga1")
@@ -531,6 +539,7 @@ shape = SubResource("ConvexPolygonShape3D_13r44")
 
 [node name="Retro Lamp" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Lamp" type="MeshInstance3D" parent="Props/Retro Lamp"]
 mesh = SubResource("ArrayMesh_n2e3l")
@@ -544,6 +553,7 @@ shape = SubResource("ConvexPolygonShape3D_e6u6m")
 
 [node name="Retro Curtains" type="RigidBody3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 75.3455, 0)
+script = ExtResource("3_4yobp")
 
 [node name="Retro Curtains" type="MeshInstance3D" parent="Props/Retro Curtains"]
 mesh = SubResource("ArrayMesh_qjixm")
@@ -554,3 +564,6 @@ shape = SubResource("ConvexPolygonShape3D_8a8p2")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Props/Retro Curtains"]
 shape = SubResource("ConvexPolygonShape3D_uucos")
+
+[node name="StaticBody3D" parent="." instance=ExtResource("19_yxtpn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
