@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://h7hf4e36crac"]
+
+[ext_resource type="Texture2D" uid="uid://xh4baktg3b2s" path="res://FloorSections/TileGrass.png" id="1_8e8fa"]
+
+[resource]
+albedo_texture = ExtResource("1_8e8fa")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -10,8 +10,8 @@ class_name ThingCollector
 @export var PropEjectKnockback : float = 16
 
 func CalculateRadiusFromVolume(volume : float):
-	return pow((volume * 3) / 4 * PI, 1.0 / 3.0)
-	
+	return pow((volume * 3) / 4 * PI, 1.0 / 3.0) / 2
+
 func RecalculateScale():
 	var radius = CalculateRadiusFromVolume(CurrentVolume)
 	
@@ -26,6 +26,8 @@ func IncrementVolume(deltaVolume : float):
 
 func ConsumeProp(other : Prop):
 	var volume = other.Volume
+	if volume > CurrentVolume: return
+	
 	IncrementVolume(volume)
 	other.reparent(collectedProps, true)
 	other.SetPassive(true)

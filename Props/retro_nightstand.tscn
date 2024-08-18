@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=4 uid="uid://cpc635r6xqlql"]
+
+[ext_resource type="Script" path="res://Props/Prop.gd" id="1_y2jsd"]
+[ext_resource type="Texture2D" uid="uid://7l73nwebdw5m" path="res://Props/Nightstand/Apt Retro Nightstand color + AO.png" id="2_f5n6h"]
+[ext_resource type="Texture2D" uid="uid://dh7yceku327q7" path="res://Props/Nightstand/Apt Retro Nightstand normal.png" id="3_vmd2e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eur46"]
+resource_name = "Apt Retro Nightstand.001"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_f5n6h")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_scale = 0.0
+normal_texture = ExtResource("3_vmd2e")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xva4y"]
+_surfaces = [{
+"aabb": AABB(-0.32808, -0.282149, 0, 0.65616, 0.544613, 0.590544),
+"format": 34359742465,
+"index_count": 204,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAAQALAAYAAQAIAAsAAQAQAAgAAgABAAYAAgAFABEAAgAGAAUACgASABMAEwALAAoACwATAA4ADgAGAAsABgAOAA0ADQAHAAYABwANABIAEgAKAAcADAAPABQAFAAVAAwAFAATABIAEgAVABQAFQASAA0ADQAMABUADwAOABMAEwAUAA8AEAABAAAAAAAWABAACAAQABYAFgAJAAgAFwADAAIAAgARABcABAAXABEAEQAFAAQAGAAZAAQABAAHABgAGgAbABwAHAAdABoAGwAZAB4AHgAcABsAHgAdABwAGgAZABsAGAAfACAAIAAhABgAIgAhACAAGAAjAB8AHwAjACIAIgAgAB8AAAAdAAkACQAWAAAAGgAdAAAAAAADABoABAAaAAMAAwAXAAQAHQAeAAkAIQAiAAoACQAeACEAIQAKAAkABwAjABgACgAiACMAIwAHAAoAIQAeABkAGQAYACEAGgAEABkA"),
+"lods": [0.0309803, PackedByteArray("AAABAAIAAAAJAAEAAgADAAAACAABAAkACAAJAAoACgALAAgAAgAFAAMABAADAAUABAAFAAYABgAHAAQADAANAA4ADgAPAAwAAQALAAYAAQAIAAsAAgABAAYAAgAGAAUACgASABMAEwALAAoACwATAA4ADgAGAAsABgAOAA0ADQAHAAYABwANABIAEgAKAAcADAAPABQAFAAVAAwAFAATABIAEgAVABQAFQASAA0ADQAMABUADwAOABMAEwAUAA8AGAAZAAQABAAHABgAGAAHAAoACgAhABgAGQAYACEAIQAKAAkAIQAeABkACQAeACEAGgAEABkABAAaAAMAAAADABoAGgAZAB0AGgAdAAAAHgAdABkAAAAdAAkAHQAeAAkA"), 0.326195, PackedByteArray("CQACAAYABgAHAAkAAgAJAAoACgALAAIADAANAA4ADgAPAAwAAgALAAYACgASABMAEwALAAoACwATAA4ADgAGAAsABgAOAA0ADQAHAAYABwANABIAEgAKAAcADAAPABQAFAAVAAwAFAATABIAEgAVABQAFQASAA0ADQAMABUADwAOABMAEwAUAA8ACQAHAAoA")],
+"name": "Apt Retro Nightstand.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("8Cprvq5hhr7jLRc/8Cprvq5hhj7jLRc/8CprPq5hhj7jLRc/8CprPq5hhr7jLRc/GfqnPq5hhr4m9/s+GfqnPq5hhj4m9/s+GfqnPq5hhj6Fksk9GfqnPq5hhr6Fksk9Gfqnvq5hhj4m9/s+Gfqnvq5hhr4m9/s+Gfqnvq5hhr6Fksk9Gfqnvq5hhj6Fksk9rmGGPoWSSb4AAAAArmGGPoWSSb6Fksk9rmGGPoWSST6Fksk9rmGGPoWSST4AAAAAmTeZvq5hhj6jzA8/mTeZPq5hhj6jzA8/rmGGvoWSSb6Fksk9rmGGvoWSST6Fksk9rmGGvoWSST4AAAAArmGGvoWSSb4AAAAAmTeZvq5hhr6jzA8/mTeZPq5hhr6jzA8/GfonPq5hhr6oPYQ+GfonPq5hhr7Ibdw+GfonPq5hhr79Oe0+4y0XPs91kL7j0+Q+4y0Xvs91kL7j0+Q+Gfonvq5hhr79Oe0+Gfonvq5hhr7Ibdw+4y0XPs91kL4dr3c+4y0Xvs91kL4dr3c+Gfonvq5hhr6oPYQ+Gfonvq5hhr7o4mY+GfonPq5hhr7o4mY+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hmbdk"]
+resource_name = "Cube_013"
+_surfaces = [{
+"aabb": AABB(-0.32808, -0.282149, 0, 0.65616, 0.544613, 0.590544),
+"attribute_data": PackedByteArray("/9lCPH6stD7sMLA+fKy0PuwwsD6qwSQ/8tlCPKrBJD/t2UI8zio9P+wwsD7OKj0/7DCwPpn0fD/52UI8mPR8P+wwsD402oM+/NlCPDTagz4I2kI8wNMIPO0wsD7A0wg8xhREP4jWAT/jYFI/iNYBP+NgUj/9Bjs/xhREP/0GOz95QTo/qu7RPuo5wj7elvU+6jnCPgAFfDxfbSg/3pb1PqwINT9KJes+eUE6P3Ahrj1fbSg/AAV8PKwINT/wjRI9xhREPzBhGj7ZnE0/fIFAPtmcTT+oodI+xRREP9Cx5T4HS2M/8OjFPhvTbD8W+dg+G9NsPya9OD8HS2M/OkVCP/foWz8Qj0Q/42BSP/0GOz/jYFI/iNYBP/foWz/qnPA+Nx95P9T9yT4kl28/rO22PiSXbz/AY3M9Nx95PwDFtTwaIEo/l45yPxogSj9Au1A/5jl3Pz67UD/mOXc/mI5yP/boWz+qodI+2ZxNP6ih0j7ZnE0/fIFAPvboWz+AgUA+B0thP8Bjcz0kl28/wGNzPSSXbz+s7bY+B0thP6zttj44H3s/Jr04PxvTbD8mvTg/G9NsPxb52D44H3s/FvnYPu0wsD5WQ5w++tlCPFZDnD7w2UI8PPYwP+0wsD489jA/m9ccP77KHj/cSPo+vsoeP8Sc4z4AmgA/WkM6PwCaAD9bNe4+vsoePx4/9D6ezyE/Hj/0PlknWD9fNe4+OSxbP9xI+j6+yh4/3kj6PjksWz+b1xw/vsoeP3rcHz+ezyE/etwfP1knWD+f1xw/OSxbP1zhIj85LFs/XOEiP77KHj9IYr8+uD9nP1817j45LFs/xJzjPvdceT+5/sk+vg50P1s17j6+yh4/SGK/PkG3Ej+5/sk+OOgFP95I+j45LFs/n9ccPzksWz9c4SI/OSxbP1tDOj/2XHk/XOEiP77KHj/sMLA+qsEkP+wwsD6qwSQ/7DCwPqrBJD/sMLA+mfR8P+wwsD6Z9Hw/+dlCPJj0fD/82UI8NNqDPvzZQjw02oM+/NlCPDTagz4I2kI8wNMIPO0wsD7A0wg87DCwPnystD7y2UI8qsEkP+wwsD7OKj0//NlCPDTagz5bNe4+vsoeP1817j45LFs/3kj6PjksWz+f1xw/OSxbPw=="),
+"format": 34359742487,
+"index_count": 204,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEAATABEAEAAUABMAFQAQABIAFQAWABcAFQASABYAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAABAAAAAAA5ADgACAA4ADkAOQAJAAgAOgADAAIAAgA7ADoABAA6ADsAOwAFAAQAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAAQQBEAEUARQBCAEEARQBDAEIAQABEAEEARgBHAEgASABJAEYASgBJAEgARgBLAEcARwBLAEoASgBIAEcATABNAE4ATgBPAEwAUABNAEwATABRAFAAPgBQAFEAUQBSAD4ATQBTAE4AVABVAFYATgBTAFQAVABWAE4APwBXADwAVgBVAFcAVwA/AFYAVABTAD0APQA8AFQAUAA+AD0A"),
+"lods": [0.0309803, PackedByteArray("AABjAAIAAABmAGMAAgBkAAAACABjAGYACABmAAoACgALAAgAAgBlAGQABABkAGUABABlAAYABgAHAAQADAANAA4ADgAPAAwAEAARABIAEAATABEAFQAQABIAFQASABYAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAPAA9AD4APgA/ADwAPAA/AFYAVgBqADwAPQA8AGoAagBWAE4AagBpAD0ATgBpAGoAZwA+AD0APgBnAFEATABRAGcAZwA9AGgAZwBoAEwAaQBoAD0ATABoAE4AaABpAE4A"), 0.326195, PackedByteArray("XgBYAFsAXABdAF8AWQBgAGEAYQBiAFoADAANAA4ADgAPAAwAFQARABIAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQATgA/AFYA")],
+"material": SubResource("StandardMaterial3D_eur46"),
+"name": "Apt Retro Nightstand.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 107,
+"vertex_data": PackedByteArray("8Cprvq5hhr7jLRc/8Cprvq5hhj7jLRc/8CprPq5hhj7jLRc/8CprPq5hhr7jLRc/GfqnPq5hhr4m9/s+GfqnPq5hhj4m9/s+GfqnPq5hhj6Fksk9GfqnPq5hhr6Fksk9Gfqnvq5hhj4m9/s+Gfqnvq5hhr4m9/s+Gfqnvq5hhr6Fksk9Gfqnvq5hhj6Fksk9rmGGPoWSSb4AAAAArmGGPoWSSb6Fksk9rmGGPoWSST6Fksk9rmGGPoWSST4AAAAA8Cprvq5hhj7jLRc/Gfqnvq5hhj6Fksk9GfqnPq5hhj6Fksk9Gfqnvq5hhj4m9/s+mTeZvq5hhj6jzA8/8CprPq5hhj7jLRc/GfqnPq5hhj4m9/s+mTeZPq5hhj6jzA8/Gfqnvq5hhr6Fksk9rmGGvoWSSb6Fksk9rmGGvoWSST6Fksk9Gfqnvq5hhj6Fksk9Gfqnvq5hhj6Fksk9rmGGvoWSST6Fksk9rmGGPoWSST6Fksk9GfqnPq5hhj6Fksk9GfqnPq5hhj6Fksk9rmGGPoWSST6Fksk9rmGGPoWSSb6Fksk9GfqnPq5hhr6Fksk9GfqnPq5hhr6Fksk9rmGGPoWSSb6Fksk9rmGGvoWSSb6Fksk9Gfqnvq5hhr6Fksk9rmGGPoWSSb4AAAAArmGGPoWSST4AAAAArmGGvoWSST4AAAAArmGGvoWSSb4AAAAArmGGvoWSST4AAAAArmGGvoWSST6Fksk9rmGGvoWSSb6Fksk9rmGGvoWSSb4AAAAArmGGvoWSSb4AAAAArmGGvoWSSb6Fksk9rmGGPoWSSb6Fksk9rmGGPoWSSb4AAAAArmGGPoWSST4AAAAArmGGPoWSST6Fksk9rmGGvoWSST6Fksk9rmGGvoWSST4AAAAAmTeZvq5hhj6jzA8/mTeZvq5hhr6jzA8/mTeZPq5hhr6jzA8/mTeZPq5hhj6jzA8/GfonPq5hhr6oPYQ+GfonPq5hhr7Ibdw+GfqnPq5hhr4m9/s+GfqnPq5hhr6Fksk9GfonPq5hhr79Oe0+4y0XPs91kL7j0+Q+4y0Xvs91kL7j0+Q+Gfonvq5hhr79Oe0+GfonPq5hhr7Ibdw+Gfonvq5hhr7Ibdw+GfonPq5hhr6oPYQ+4y0XPs91kL4dr3c+4y0Xvs91kL4dr3c+Gfonvq5hhr6oPYQ+Gfonvq5hhr7o4mY+GfonPq5hhr7o4mY+8Cprvq5hhr7jLRc/Gfonvq5hhr79Oe0+Gfqnvq5hhr4m9/s+mTeZvq5hhr6jzA8/GfonPq5hhr79Oe0+8CprPq5hhr7jLRc/mTeZPq5hhr6jzA8/Gfonvq5hhr7Ibdw+Gfonvq5hhr6oPYQ+Gfonvq5hhr7o4mY+Gfqnvq5hhr6Fksk9GfonPq5hhr7o4mY+8CprPq5hhj7jLRc/8CprPq5hhj7jLRc/8CprPq5hhj7jLRc/GfqnPq5hhj6Fksk9GfqnPq5hhj6Fksk9GfqnPq5hhr6Fksk9Gfqnvq5hhr4m9/s+Gfqnvq5hhr4m9/s+Gfqnvq5hhr4m9/s+Gfqnvq5hhr6Fksk9Gfqnvq5hhj6Fksk98Cprvq5hhj7jLRc/8CprPq5hhr7jLRc/GfqnPq5hhj4m9/s+Gfqnvq5hhr4m9/s+GfonPq5hhr79Oe0+Gfonvq5hhr79Oe0+Gfonvq5hhr7Ibdw+Gfonvq5hhr6oPYQ+w2r/f/9////Dav9//3///zuV/3//f///O5X/f/9////C6v9//3///8Lq/3//f///////f/9///////9//3/+/zwV/3//f///PBX/f/9///8AAP9//3///wAA/3//f///////f/9//7////9//3//v////3//f/+/////f/9//7//f////3//v/9/////f/+//3////9//7//f////3//v/9/////f/+//3////9//7//f////3//v/9/////f/+///////7//7///////v//v//////+//+///////7//7///////38AgP//////fwCA//////9/AID//////38AgP/////+//+///////7//7///////v//v//////+//+///////9/AID//////38AgP//////fwCA//////9/AID/////AAD/v/////8AAP+//////wAA/7//////AAD/vwAA/3/+/wCAAAD/f/7/AIAAAP9//v8AgAAA/3/+/wCA/38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//f/////////9//////////3//////////f/////////8//3//f////z//f/9/////v/9//3////+//3//f////38AAP//////fwAA//////9/AAAAAP7//38AAAAAAIDootFFUNM1gsaZxxkAAACAOGbHGf7/AIAWXdFFriw1gtDF6CKuLMj9LjroIlDTyP3ootFFUNM1gsaZxxkAAACAOGbHGf//AIAWXdFFriw1gi466CJQ08j90MXoIq4syP3/fwAA/v/+//9/AAD//////38AAP7//v//fwAA/v/+//9/AAAAAP7//38AAAAA/v//fwAA/v////9/AAD//////38AAP//////fwAAAAAAgP9/AAAAAACA/38AAAAAAICguzdl/3///0xPusj/f///Nk//f/9////0xuVX/3///6vf/3//f///1tv/f/9//v8zl0wm/3///1Gw/3//f///bCGhkf9///8JIKSK/3///+An/3//f///7lH/f/9////crf9//3///77U/3//f///pC3/f/9///8LhnMMUNM1gmF9vQauLDWCrnIBBlDTyP3Qe7sCriw1gg==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xva4y")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cvyqs"]
+points = PackedVector3Array(0.304022, 0.257243, 0.5502, -0.260761, -0.196848, 0.00589769, -0.317525, -0.254432, 0.098424, 0.317525, -0.254432, 0.098424, -0.232112, -0.258602, 0.589527, -0.317525, 0.251598, 0.098424, 0.262464, 0.195575, 0.00399779, -0.30404, 0.257258, 0.550157, 0.30404, -0.259665, 0.550157, 0.317525, 0.251598, 0.098424, -0.324882, -0.260064, 0.499842, 0.232112, 0.256108, 0.589527, -0.262464, 0.195575, 0.00399779, 0.260761, -0.196848, 0.00589769, 0.149917, -0.276248, 0.236962, 0.232112, -0.258602, 0.589527, 0.324882, 0.25769, 0.499842, -0.232112, 0.256108, 0.589527, -0.150983, -0.278132, 0.44778, -0.324882, 0.25769, 0.499842, 0.324882, -0.260064, 0.499842, -0.282122, -0.258211, 0.568812, 0.150983, -0.278132, 0.44778, 0.296713, 0.259789, 0.562768, -0.149917, -0.276248, 0.236962)
+
+[node name="Retro Nightstand" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 0, 0)
+script = ExtResource("1_y2jsd")
+
+[node name="Retro Nightstand" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_hmbdk")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_cvyqs")
