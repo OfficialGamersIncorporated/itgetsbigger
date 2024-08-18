@@ -1,24 +1,48 @@
 extends MeshInstance3D
 
 @onready var area : Area3D = $Area3D
-@onready var displaceMap : Image
-@export var displaceMapSize : Vector2i = Vector2i(256, 256)
+@onready var MatInstance : ShaderMaterial #= material_override #mesh.surface_get_material(0) #get_surface_override_material(0)
+@onready var visualMesh : QuadMesh# = mesh
+@onready var imprintRect2 : Rect2 = Rect2(0, 0, imprintImageSize.x, imprintImageSize.y)
+var displaceMap : Image
+var displaceMapSize : Vector2i = Vector2i(256, 256)
+
 @export var imprintImage : Image
 @export var imprintImageMask : Image
 @export var imprintImageSize : Vector2i
-@onready var imprintRect2 : Rect2 = Rect2(0, 0, imprintImageSize.x, imprintImageSize.y)
 @export var imprintUpdateMoveDistance : float = .25
+
+@export var PolyResolutionPerUnit : float = 16
+@export var DisplacementResolutionPerUnit : float = 20
+
 
 var bodiesLastPositions = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	material_override = material_override.duplicate(false)
+	MatInstance = material_override
+	
+	mesh = mesh.duplicate()
+	visualMesh = mesh
+	
+	var boundingBox : AABB = visualMesh.get_aabb()
+	var size : Vector3 = global_basis.get_scale() #transform.basis.get_scale()
+	print(size)
+	visualMesh.subdivide_depth = size.x * PolyResolutionPerUnit
+	visualMesh.subdivide_width = size.z * PolyResolutionPerUnit
+	displaceMapSize = Vector2i(
+		size.x * DisplacementResolutionPerUnit,
+		size.z * DisplacementResolutionPerUnit,
+	)
+	
 	displaceMap = Image.create(displaceMapSize.x, displaceMapSize.y, false, Image.FORMAT_L8)
 	displaceMap.fill(Color.WHITE)
 	SendTextureToGPU()
 
 func  SendTextureToGPU():
-	RenderingServer.global_shader_parameter_set("SnowDisplacementMap", ImageTexture.create_from_image(displaceMap))
+	#RenderingServer.global_shader_parameter_set("SnowDisplacementMap", ImageTexture.create_from_image(displaceMap))
+	MatInstance.set_shader_parameter("SnowDisplacementMap", ImageTexture.create_from_image(displaceMap))
 
 func BlendImages(sourceImg : Image, maskImg : Image, sourceRect : Rect2, coords : Vector2i, alpha : float):
 	for x in sourceRect.size.x:
@@ -26,10 +50,16 @@ func BlendImages(sourceImg : Image, maskImg : Image, sourceRect : Rect2, coords 
 			var maskPixel = maskImg.get_pixel(x, y)
 			if maskPixel.a <= 0: continue
 			
+			var displacePixelCoord = coords + Vector2i(x, y)
+			if displacePixelCoord.x < 0: continue
+			if displacePixelCoord.y < 0: continue
+			if displacePixelCoord.x >= displaceMapSize.x: continue
+			if displacePixelCoord.y >= displaceMapSize.y: continue
+			
 			var sourcePixel = sourceImg.get_pixel(x, y).get_luminance()
-			var currentPixel = displaceMap.get_pixel(coords.x + x, coords.y + y).get_luminance()
+			var currentPixel = displaceMap.get_pixelv(displacePixelCoord).get_luminance()
 			var newValue = lerp(currentPixel, min(currentPixel, sourcePixel), alpha)
-			displaceMap.set_pixel(coords.x + x, coords.y + y, Color(newValue, newValue, newValue))
+			displaceMap.set_pixelv(displacePixelCoord, Color(newValue, newValue, newValue))
 
 func CreateImprint(uvPos : Vector2):
 	#var fillImage : Image = Image.create(imprintRect2.size.x, imprintRect2.size.y, false, Image.FORMAT_L8)
@@ -43,8 +73,7 @@ func CreateImprint(uvPos : Vector2):
 	SendTextureToGPU()
 
 func GetUVFromWorldPos(worldPos : Vector3):
-	var visualMesh : QuadMesh = mesh
-	var localPos = global_transform * worldPos
+	var localPos = to_local(worldPos) #global_transform * worldPos
 	var uv = Vector2(localPos.x, localPos.z) / visualMesh.size + Vector2.ONE/2
 	return uv
 
