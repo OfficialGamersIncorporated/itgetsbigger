@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c40hmw7e7i4lh"]
+[gd_scene load_steps=23 format=3 uid="uid://c40hmw7e7i4lh"]
 
 [ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_oq3vt"]
 [ext_resource type="Script" path="res://PropManager.gd" id="2_68uey"]
@@ -14,6 +14,7 @@
 [ext_resource type="Material" uid="uid://uhnyljscrfhu" path="res://FloorSections/Materials/DynamicSnow/DynamicSnowDisplace.tres" id="14_2t4uq"]
 [ext_resource type="Script" path="res://FloorSections/Materials/DynamicSnow/DynamicSnow.gd" id="15_e1eml"]
 [ext_resource type="Image" uid="uid://cpcm6a7t732yg" path="res://FloorSections/Materials/DynamicSnow/SnowImprint_Small.png" id="16_ttxol"]
+[ext_resource type="Image" uid="uid://3iva167xwtdp" path="res://FloorSections/Materials/DynamicSnow/SnowImprint_Small_Mask.png" id="17_gmmfd"]
 [ext_resource type="PackedScene" uid="uid://bgg86rqtdc0dq" path="res://Enemies/StaticEnemy.tscn" id="19_yxtpn"]
 [ext_resource type="PackedScene" uid="uid://mb0pe3vve3rc" path="res://FloorSections/FloorSection_Walled.tscn" id="21_e3ebv"]
 
@@ -32,7 +33,8 @@ background_mode = 2
 background_energy_multiplier = 2.37
 sky = SubResource("Sky_na6cy")
 tonemap_mode = 1
-tonemap_white = 4.0
+tonemap_exposure = 0.77
+tonemap_white = 16.0
 glow_enabled = true
 fog_light_color = Color(0.23, 0.512333, 1, 1)
 fog_density = 0.0314
@@ -40,8 +42,8 @@ fog_density = 0.0314
 [sub_resource type="QuadMesh" id="QuadMesh_emm6m"]
 material = ExtResource("14_2t4uq")
 size = Vector2(12, 12)
-subdivide_width = 64
-subdivide_depth = 64
+subdivide_width = 256
+subdivide_depth = 256
 orientation = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7yy7g"]
@@ -136,6 +138,7 @@ mesh = SubResource("QuadMesh_emm6m")
 skeleton = NodePath("")
 script = ExtResource("15_e1eml")
 imprintImage = ExtResource("16_ttxol")
+imprintImageMask = ExtResource("17_gmmfd")
 imprintImageSize = Vector2i(16, 16)
 
 [node name="Area3D" type="Area3D" parent="SnowDisplacement"]

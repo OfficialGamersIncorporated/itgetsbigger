@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://851k66khas57"]
+
+[ext_resource type="Texture2D" uid="uid://cc8vwsbb5uf0u" path="res://FloorSections/Materials/Generated/TileGrassySnow_albedo.png" id="1_4yhxd"]
+[ext_resource type="Texture2D" uid="uid://gom56glpoko2" path="res://FloorSections/Materials/Generated/TileGrassySnow_normal.png" id="2_4mw75"]
+[ext_resource type="Texture2D" uid="uid://b3d4eo44cvw26" path="res://FloorSections/Materials/Generated/TileGrassySnow_orm.png" id="3_bbv83"]
+
+[resource]
+albedo_texture = ExtResource("1_4yhxd")
+roughness_texture = ExtResource("3_bbv83")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_4mw75")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true

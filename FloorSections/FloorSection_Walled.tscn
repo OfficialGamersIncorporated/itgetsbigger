@@ -1,19 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://mb0pe3vve3rc"]
+[gd_scene load_steps=3 format=3 uid="uid://mb0pe3vve3rc"]
 
+[ext_resource type="Material" uid="uid://851k66khas57" path="res://FloorSections/Materials/TileGrassySnow.tres" id="1_2xx6e"]
 [ext_resource type="Material" uid="uid://0y36xybvhljo" path="res://FloorSections/Materials/TileSnow.tres" id="1_176lc"]
 
 [node name="FloorSection_Walled" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-material_override = ExtResource("1_176lc")
+material_override = ExtResource("1_2xx6e")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.5, 0)
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.25, 0)
+material_override = ExtResource("1_176lc")
 size = Vector3(0.1, 0.5, 2)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 0.5, 0)
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9, 0, 0)
 size = Vector3(0.1, 0.5, 2)

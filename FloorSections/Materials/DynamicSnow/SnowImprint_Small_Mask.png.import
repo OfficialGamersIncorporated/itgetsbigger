@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://3iva167xwtdp"
+path="res://.godot/imported/SnowImprint_Small_Mask.png-a899913181494dc5745fce7055a5913b.image"
+
+[deps]
+
+source_file="res://FloorSections/Materials/DynamicSnow/SnowImprint_Small_Mask.png"
+dest_files=["res://.godot/imported/SnowImprint_Small_Mask.png-a899913181494dc5745fce7055a5913b.image"]
+
+[params]
+
