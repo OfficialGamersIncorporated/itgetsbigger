@@ -25,5 +25,7 @@ mesh = SubResource("SphereMesh_ds5u7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 top_level = true
 script = ExtResource("2_ttmwn")
+MinTargetDistance = 7.5
+MaxTargetDistance = 10.0
 
 [node name="CollectedProps" type="Node3D" parent="."]

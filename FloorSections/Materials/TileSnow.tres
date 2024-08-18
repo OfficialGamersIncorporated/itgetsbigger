@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://0y36xybvhljo"]
+
+[ext_resource type="Texture2D" uid="uid://bsc7qdp2mqt" path="res://FloorSections/Materials/Generated/TileSnow_albedo.png" id="1_od0y6"]
+[ext_resource type="Texture2D" uid="uid://bhc2skag24v1v" path="res://FloorSections/Materials/Generated/Glitter/Glitter_normal.png" id="2_vbg1y"]
+[ext_resource type="Texture2D" uid="uid://cyrpn5cio05mu" path="res://FloorSections/Materials/Generated/TileSnow_normal.png" id="3_0ewob"]
+[ext_resource type="Texture2D" uid="uid://ddcxoenw2gglj" path="res://FloorSections/Materials/Generated/TileSnow_orm.png" id="4_3sga4"]
+
+[resource]
+albedo_texture = ExtResource("1_od0y6")
+roughness_texture = ExtResource("4_3sga4")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_0ewob")
+backlight_enabled = true
+backlight = Color(0.454524, 0.454524, 0.454524, 1)
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_normal = ExtResource("2_vbg1y")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true

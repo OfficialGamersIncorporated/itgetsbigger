@@ -65,19 +65,16 @@ func Damage(damagePercent : float, damageOrigin : Vector3):
 	apply_central_impulse(-damageOrigin * DamageKnockback)
 
 func _ready() -> void:
-	CurrentVolume = (4/3) * PI * pow(.5, 3.0)
+	CurrentVolume = (4.0/3.0) * PI * pow(.5, 3.0)
 	RecalculateScale()
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
-	pass
-
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var bodies = get_colliding_bodies()
 	for body in bodies:
 		if body.get_collision_layer_value(3):
 			var damageVect = body.global_position - global_position
-			Damage(10, damageVect)
+			Damage(20, damageVect)
 			return
 		
 		if not body.is_class("RigidBody3D"): continue

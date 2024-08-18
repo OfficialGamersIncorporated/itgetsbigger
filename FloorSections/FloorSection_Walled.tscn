@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://mb0pe3vve3rc"]
 
-[ext_resource type="Material" uid="uid://h7hf4e36crac" path="res://FloorSections/TileGrass.tres" id="1_4hqvy"]
+[ext_resource type="Material" uid="uid://0y36xybvhljo" path="res://FloorSections/Materials/TileSnow.tres" id="1_176lc"]
 
 [node name="FloorSection_Walled" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
-material_override = ExtResource("1_4hqvy")
+material_override = ExtResource("1_176lc")
 use_collision = true
 size = Vector3(2, 0.5, 2)
 

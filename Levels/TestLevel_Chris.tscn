@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c40hmw7e7i4lh"]
+[gd_scene load_steps=22 format=3 uid="uid://c40hmw7e7i4lh"]
 
 [ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_oq3vt"]
 [ext_resource type="Script" path="res://PropManager.gd" id="2_68uey"]
+[ext_resource type="Material" uid="uid://0y36xybvhljo" path="res://FloorSections/Materials/TileSnow.tres" id="2_e4tqg"]
 [ext_resource type="PackedScene" uid="uid://djft1p7ciiwio" path="res://Props/retro_desk.tscn" id="3_r2f8m"]
 [ext_resource type="PackedScene" uid="uid://dpkog6ppiexy1" path="res://Props/retro_chair.tscn" id="4_cxysk"]
 [ext_resource type="PackedScene" uid="uid://dqfsyw2dvfd0r" path="res://Props/plastic_blinds.tscn" id="5_5k14k"]
@@ -10,20 +11,41 @@
 [ext_resource type="PackedScene" uid="uid://bdim3qh0boydx" path="res://Props/retro_filing_cabinet.tscn" id="8_62uy0"]
 [ext_resource type="PackedScene" uid="uid://dqe5kjn42vyd4" path="res://Props/retro_lamp.tscn" id="9_jotv1"]
 [ext_resource type="PackedScene" uid="uid://scmcfp6gop1p" path="res://Props/retro_curtains.tscn" id="10_1y4wd"]
-[ext_resource type="Material" uid="uid://h7hf4e36crac" path="res://FloorSections/TileGrass.tres" id="13_pvpy5"]
+[ext_resource type="Material" uid="uid://uhnyljscrfhu" path="res://FloorSections/Materials/DynamicSnow/DynamicSnowDisplace.tres" id="14_2t4uq"]
+[ext_resource type="Script" path="res://FloorSections/Materials/DynamicSnow/DynamicSnow.gd" id="15_e1eml"]
+[ext_resource type="Image" uid="uid://cpcm6a7t732yg" path="res://FloorSections/Materials/DynamicSnow/SnowImprint_Small.png" id="16_ttxol"]
 [ext_resource type="PackedScene" uid="uid://bgg86rqtdc0dq" path="res://Enemies/StaticEnemy.tscn" id="19_yxtpn"]
 [ext_resource type="PackedScene" uid="uid://mb0pe3vve3rc" path="res://FloorSections/FloorSection_Walled.tscn" id="21_e3ebv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j07cq"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_top_color = Color(0, 0.229167, 0.55, 1)
+sky_horizon_color = Color(0.356863, 0.47451, 0.670588, 1)
+ground_bottom_color = Color(0, 0.194333, 0.53, 1)
+ground_horizon_color = Color(0.356863, 0.47451, 0.670588, 1)
+sun_angle_max = 130.0
 
 [sub_resource type="Sky" id="Sky_na6cy"]
 sky_material = SubResource("ProceduralSkyMaterial_j07cq")
 
 [sub_resource type="Environment" id="Environment_udpdw"]
 background_mode = 2
+background_energy_multiplier = 2.37
 sky = SubResource("Sky_na6cy")
+tonemap_mode = 1
+tonemap_white = 4.0
+glow_enabled = true
+fog_light_color = Color(0.23, 0.512333, 1, 1)
+fog_density = 0.0314
+
+[sub_resource type="QuadMesh" id="QuadMesh_emm6m"]
+material = ExtResource("14_2t4uq")
+size = Vector2(12, 12)
+subdivide_width = 64
+subdivide_depth = 64
+orientation = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7yy7g"]
+size = Vector3(12, 0.5, 12)
 
 [node name="Node3D" type="Node3D"]
 
@@ -36,72 +58,88 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_oq3vt")]
 
-[node name="Props" type="Node3D" parent="."]
+[node name="Stage" type="Node3D" parent="."]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.25)
+material_override = ExtResource("2_e4tqg")
+use_collision = true
+size = Vector3(12, 1, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.75, 6.25)
+material_override = ExtResource("2_e4tqg")
+use_collision = true
+size = Vector3(4, 1.5, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Stage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.75, 6.25)
+material_override = ExtResource("2_e4tqg")
+use_collision = true
+size = Vector3(4, 1.5, 0.5)
+
+[node name="FloorSection_Walled" parent="Stage" instance=ExtResource("21_e3ebv")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 16)
+
+[node name="FloorSection_Walled2" parent="Stage" instance=ExtResource("21_e3ebv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, -1, 0)
+
+[node name="StaticEnemy" parent="Stage" instance=ExtResource("19_yxtpn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Props" type="Node3D" parent="Stage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 script = ExtResource("2_68uey")
 
-[node name="Retro Desk" parent="Props" instance=ExtResource("3_r2f8m")]
+[node name="Retro Desk" parent="Stage/Props" instance=ExtResource("3_r2f8m")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, -1, 8)
 
-[node name="Retro Desk2" parent="Props" instance=ExtResource("3_r2f8m")]
+[node name="Retro Desk2" parent="Stage/Props" instance=ExtResource("3_r2f8m")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -3.60178, -1, 0.497487)
 
-[node name="Retro Chair" parent="Props" instance=ExtResource("4_cxysk")]
+[node name="Retro Chair" parent="Stage/Props" instance=ExtResource("4_cxysk")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -5, -1, 7)
 
-[node name="Retro Chair2" parent="Props" instance=ExtResource("4_cxysk")]
+[node name="Retro Chair2" parent="Stage/Props" instance=ExtResource("4_cxysk")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -2, -1, 0)
 
-[node name="Plastic Blinds" parent="Props" instance=ExtResource("5_5k14k")]
+[node name="Plastic Blinds" parent="Stage/Props" instance=ExtResource("5_5k14k")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -4, 1.3455, 3)
 
-[node name="Retro Bed" parent="Props" instance=ExtResource("6_2obbq")]
+[node name="Retro Bed" parent="Stage/Props" instance=ExtResource("6_2obbq")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 1, -1, 11)
 
-[node name="Retro Bed2" parent="Props" instance=ExtResource("6_2obbq")]
+[node name="Retro Bed2" parent="Stage/Props" instance=ExtResource("6_2obbq")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -1, -1, 11)
 
-[node name="Retro Nightstand" parent="Props" instance=ExtResource("7_f1mwu")]
+[node name="Retro Nightstand" parent="Stage/Props" instance=ExtResource("7_f1mwu")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -3, -1, 4)
 
-[node name="Retro Nightstand2" parent="Props" instance=ExtResource("7_f1mwu")]
+[node name="Retro Nightstand2" parent="Stage/Props" instance=ExtResource("7_f1mwu")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 4, -1, 0)
 
-[node name="Retro Filing Cabinet" parent="Props" instance=ExtResource("8_62uy0")]
+[node name="Retro Filing Cabinet" parent="Stage/Props" instance=ExtResource("8_62uy0")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 4, -1, 8)
 
-[node name="Retro Lamp" parent="Props" instance=ExtResource("9_jotv1")]
+[node name="Retro Lamp" parent="Stage/Props" instance=ExtResource("9_jotv1")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 2, -1, 2)
 
-[node name="Retro Lamp2" parent="Props" instance=ExtResource("9_jotv1")]
+[node name="Retro Lamp2" parent="Stage/Props" instance=ExtResource("9_jotv1")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -2, -1, 7)
 
-[node name="Retro Curtains" parent="Props" instance=ExtResource("10_1y4wd")]
+[node name="Retro Curtains" parent="Stage/Props" instance=ExtResource("10_1y4wd")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 0, 1, 1)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("19_yxtpn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+[node name="SnowDisplacement" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
+mesh = SubResource("QuadMesh_emm6m")
+skeleton = NodePath("")
+script = ExtResource("15_e1eml")
+imprintImage = ExtResource("16_ttxol")
+imprintImageSize = Vector2i(16, 16)
 
-[node name="FloorSection_Walled" parent="." instance=ExtResource("21_e3ebv")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 16)
+[node name="Area3D" type="Area3D" parent="SnowDisplacement"]
 
-[node name="FloorSection_Walled2" parent="." instance=ExtResource("21_e3ebv")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, -1, 0)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6)
-material_override = ExtResource("13_pvpy5")
-use_collision = true
-size = Vector3(11, 1, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 6)
-material_override = ExtResource("13_pvpy5")
-use_collision = true
-size = Vector3(4, 1, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.5, 6)
-material_override = ExtResource("13_pvpy5")
-use_collision = true
-size = Vector3(4, 1, 1)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SnowDisplacement/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_7yy7g")

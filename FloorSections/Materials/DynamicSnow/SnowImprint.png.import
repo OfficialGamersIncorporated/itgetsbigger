@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://qllvjhudxr86"
+path="res://.godot/imported/SnowImprint.png-b987ef63f2fbbc3e93a534bed94419fc.image"
+
+[deps]
+
+source_file="res://FloorSections/Materials/DynamicSnow/SnowImprint.png"
+dest_files=["res://.godot/imported/SnowImprint.png-b987ef63f2fbbc3e93a534bed94419fc.image"]
+
+[params]
+

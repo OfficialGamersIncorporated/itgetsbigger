@@ -51,3 +51,10 @@ walk_right={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+
+[shader_globals]
+
+SnowDisplacementMap={
+"type": "sampler2D",
+"value": ""
+}

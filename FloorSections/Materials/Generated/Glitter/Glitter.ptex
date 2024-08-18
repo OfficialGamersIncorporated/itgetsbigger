@@ -1,0 +1,160 @@
+{
+	"connections": [
+		{
+			"from": "noise_white",
+			"from_port": 0,
+			"to": "combine",
+			"to_port": 0
+		},
+		{
+			"from": "noise_white_2",
+			"from_port": 0,
+			"to": "combine",
+			"to_port": 1
+		},
+		{
+			"from": "noise_white_3",
+			"from_port": 0,
+			"to": "remap",
+			"to_port": 0
+		},
+		{
+			"from": "remap",
+			"from_port": 0,
+			"to": "combine",
+			"to_port": 2
+		},
+		{
+			"from": "normal_map_convert_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "combine",
+			"from_port": 0,
+			"to": "normal_map_convert_2",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "1369",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_last_target": "Godot/Godot 4 Standard",
+			"export_paths": {
+				"Godot/Godot 4 Standard": "D:/GitHub/itgetsbigger/FloorSections/Materials/Generated/Glitter/Glitter"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 0,
+				"y": 0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": true,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 9,
+				"sss": 1
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "noise_white",
+			"node_position": {
+				"x": -868,
+				"y": -67.5
+			},
+			"parameters": {
+				"size": 10
+			},
+			"seed_int": 0,
+			"type": "noise_white"
+		},
+		{
+			"name": "combine",
+			"node_position": {
+				"x": -468,
+				"y": -11.5
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "combine"
+		},
+		{
+			"name": "noise_white_2",
+			"node_position": {
+				"x": -871,
+				"y": -1.5
+			},
+			"parameters": {
+				"size": 10
+			},
+			"seed_int": 3218215168,
+			"type": "noise_white"
+		},
+		{
+			"name": "noise_white_3",
+			"node_position": {
+				"x": -953,
+				"y": 68.5
+			},
+			"parameters": {
+				"size": 10
+			},
+			"seed_int": 2142177792,
+			"type": "noise_white"
+		},
+		{
+			"name": "remap",
+			"node_position": {
+				"x": -677,
+				"y": 68.5
+			},
+			"parameters": {
+				"max": 1,
+				"min": 0.5,
+				"step": 0
+			},
+			"seed_int": 0,
+			"type": "remap"
+		},
+		{
+			"name": "normal_map_convert_2",
+			"node_position": {
+				"x": -278,
+				"y": 84.25
+			},
+			"parameters": {
+				"op": 0
+			},
+			"seed_int": 0,
+			"type": "normal_map_convert"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

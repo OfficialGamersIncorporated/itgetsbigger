@@ -7,7 +7,7 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dk18c"]
 
-[node name="StaticBody3D" type="StaticBody3D"]
+[node name="StaticEnemy" type="StaticBody3D"]
 collision_layer = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
