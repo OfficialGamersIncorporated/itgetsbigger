@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://bdim3qh0boydx"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_n0ul7"]
-[ext_resource type="Texture2D" uid="uid://ng3mu8ls65g1" path="res://Props/Filing Cabinet/Apt Retro Filing Cabinet color + AO.png" id="2_ntxnm"]
-[ext_resource type="Texture2D" uid="uid://cy22oo8t6467e" path="res://Props/Filing Cabinet/Apt Retro Filing Cabinet normal.png" id="3_2ymnv"]
+[ext_resource type="Texture2D" uid="uid://ng3mu8ls65g1" path="res://Props/Textures/Filing Cabinet/Apt Retro Filing Cabinet color + AO.png" id="2_ntxnm"]
+[ext_resource type="Texture2D" uid="uid://cy22oo8t6467e" path="res://Props/Textures/Filing Cabinet/Apt Retro Filing Cabinet normal.png" id="3_2ymnv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xnul6"]
 resource_name = "Apt Retro Filing Cabinet.002"

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://dpkog6ppiexy1"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_0w05t"]
-[ext_resource type="Texture2D" uid="uid://bufghqwlkq6mc" path="res://Props/Chair/Apt Retro Chair color + AO.png" id="2_w4hqs"]
-[ext_resource type="Texture2D" uid="uid://dqc062jyk2ev0" path="res://Props/Chair/Apt Retro Chair normal.png" id="3_tvy63"]
+[ext_resource type="Texture2D" uid="uid://bufghqwlkq6mc" path="res://Props/Textures/Chair/Apt Retro Chair color + AO.png" id="2_w4hqs"]
+[ext_resource type="Texture2D" uid="uid://dqc062jyk2ev0" path="res://Props/Textures/Chair/Apt Retro Chair normal.png" id="3_tvy63"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uq1a"]
 resource_name = "Apt Retro Chair.011"

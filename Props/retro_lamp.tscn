@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://dqe5kjn42vyd4"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_cpjta"]
-[ext_resource type="Texture2D" uid="uid://dsr423tfoceoo" path="res://Props/Lamp/Apt Retro Lamp color + AO.png" id="2_lb4ck"]
-[ext_resource type="Texture2D" uid="uid://cakx30clhb15e" path="res://Props/Lamp/Apt Retro Lamp normal.png" id="3_thapa"]
+[ext_resource type="Texture2D" uid="uid://dsr423tfoceoo" path="res://Props/Textures/Lamp/Apt Retro Lamp color + AO.png" id="2_lb4ck"]
+[ext_resource type="Texture2D" uid="uid://cakx30clhb15e" path="res://Props/Textures/Lamp/Apt Retro Lamp normal.png" id="3_thapa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yh8p3"]
 resource_name = "Apt Retro Lamp.002"

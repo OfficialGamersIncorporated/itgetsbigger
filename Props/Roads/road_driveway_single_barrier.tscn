@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=4 uid="uid://pkng8njhxrkk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jj6gd"]
+resource_name = "pavement"
+albedo_color = Color(0.884383, 0.884383, 0.906332, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_phds1"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.08, 1),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAgADAAQABAAFAAIACAAGAAcABwAJAAgACgAAAAIAAgAFAAoACwAKAAUABQAEAAsACQAHAAwADAANAAkAEAAOAA8ADwARABAAEgAGAAgACAATABIAFgAUABUAFQAXABYADgAUABYAFgAPAA4ACgALAAEAAQAAAAoABwAGABIAEgAMAAcAEwAIAAkACQANABMADAASABMAEwANAAwAFQAUAA4ADgAQABUAFwAVABAAEAARABcADwAWABcAFwARAA8ABAADAAEAAQALAAQA"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAADLzAAAAAAAA//8AAP//AAAy8wAA//8AAP//AAD///////8AAP////9Q+AAAR6EAAMwMAABHoQAAAAAAAEeh//+uBwAAR6H//wAAAAAAAP//UPgAAAAA/////wAA//8AAAAAAAD/////AAAAAAAA//+uBwAAAAD//wAAAAC3Xv//rgcAALde//8AAAAA//8AAMwMAAD/////rgcAAAAAAADMDAAAt14AAMwMAAAAAAAAAAAAALdeAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f3fme"]
+resource_name = "road_drivewaySingleBarrier_Mesh road_drivewaySingleBarrier"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.08, 1),
+"attribute_data": PackedByteArray("///Q8/////8AANDzAAD//wAAL4YAALJyzAwvhq4HsnLMDC+GAAAvhq4HsnIAALJy//+YawAAmGv//4FXAACBVwAAr/j//6/4AAD///////+3Xi+GAAAvhrdesnIAALJyAACvEwAAYAy3Xq8Tt15gDEehmGtHoYFX//+Ya///gVf//44YR6GOGP//YAxHoWAMzAwvhgAAL4auB7JyAACycv//snL//y+GUPiycjLzL4a3Xo4YAACOGLdeYAwAAGAMR6GvE0ehYAz//68T//9gDDLzL4ZQ+LJy//8vhv//snIAAJhrAACBV7demGu3XoFXMvMvhlD4snL//y+G//+ycv//L4ZHoS+G//+yckehsnL//y+GAAAvhv//snIAALJy"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGQAbABoAHgAcAB0AHQAfAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4AMgAwADEAMQAzADIANgA0ADUANQA3ADYAOgA4ADkAOQA7ADoAPgA8AD0APQA/AD4AQgBAAEEAQQBDAEIARgBEAEUARQBHAEYA"),
+"material": SubResource("StandardMaterial3D_jj6gd"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(39.3701, 41.3701, 0, 0),
+"vertex_count": 72,
+"vertex_data": PackedByteArray("AAAAADLz//8AAAAA////////AAAy8/////8AAP///////wAA////v/////////+///8AADLz/7//////UPj/v0ehAADMDP+/R6EAAAAA/79Hof//rgf/v0eh//8AAP+/AAAAADLz/////wAAMvP//wAA//9Q+P///////1D4//8AAP//UPj/v/////9Q+P+/AAD//////7//////////v0ehAAAAAP////8AAAAA//9Hof//AAD///////8AAP//AAD//64H/78AAP//AAD/v7de//+uB/+/t17//wAA/79HoQAAzAz6iUeh//+uB/qJ//8AAMwM+on/////rgf6iQAAAADMDP//t14AAMwM//8AAAAAAAD//7deAAAAAP//AAAAAMwM/78AAAAAAAD/vwAA//+uB/+/AAD//wAA/78AAP//////vwAAAAD///+/AAD//1D4/78AAAAAMvP/v0ehAADMDP////8AAMwM//9HoQAAAAD/////AAAAAP//R6H//64H/79Hof//AAD/v/////+uB/+//////wAA/7///wAAzAz/v/////+uB/+///8AAAAA/7//////AAD/vwAAAADMDPqJAAD//64H+om3XgAAzAz6ibde//+uB/qJt14AAMwM/7+3Xv//rgf/v7deAAAAAP+/t17//wAA/78AAAAAAAD//7deAAAAAP//AAD//wAA//+3Xv//AAD/////AAD//wCAAAAAAP//AID///////8AgAAA/////wCA/3//P/9//z//f/8//3//P/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3/38f9/9/H/f/fx/3/38f///3////9/////f////3//f////3////9/////f///////f////3////9/////f////3////9/////f////3//f/8//3//P/9//z//f/8//3////9/////f////3////9/////f////3////9/////f/8//3//P/9//z//f/8/////f////3////9/////f/9/AAD/fwAA/38AAP9/AAD///9/////f////3////9//38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_phds1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5y0n4"]
+data = PackedVector3Array(0.5, 0, 0.45, -0.5, 0, 0.45, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.45, 0.5, 0, 0.45, 0.5, 0, 0.5, 0.5, 0.08, 0.5, 0.5, 0.08, 0.5, 0.5, 0.08, 0.47, 0.5, 0, 0.45, 0.13, 0.08, -0.47, 0.13, 0, -0.45, 0.13, 0, -0.5, 0.13, 0, -0.5, 0.13, 0.08, -0.5, 0.13, 0.08, -0.47, -0.5, 0.08, 0.47, -0.5, 0, 0.45, 0.5, 0, 0.45, 0.5, 0, 0.45, 0.5, 0.08, 0.47, -0.5, 0.08, 0.47, -0.5, 0.08, 0.5, -0.5, 0.08, 0.47, 0.5, 0.08, 0.47, 0.5, 0.08, 0.47, 0.5, 0.08, 0.5, -0.5, 0.08, 0.5, 0.13, 0.08, -0.5, 0.13, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0.08, -0.5, 0.13, 0.08, -0.5, -0.13, 0.08, -0.47, -0.5, 0.08, -0.47, -0.5, 0.08, -0.5, -0.5, 0.08, -0.5, -0.13, 0.08, -0.5, -0.13, 0.08, -0.47, 0.5, 0, -0.45, 0.13, 0, -0.45, 0.13, 0.08, -0.47, 0.13, 0.08, -0.47, 0.5, 0.08, -0.47, 0.5, 0, -0.45, -0.5, 0, -0.5, -0.5, 0, -0.45, -0.13, 0, -0.45, -0.13, 0, -0.45, -0.13, 0, -0.5, -0.5, 0, -0.5, -0.5, 0.08, -0.47, -0.5, 0, -0.45, -0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0.08, -0.5, -0.5, 0.08, -0.47, -0.5, 0.08, 0.47, -0.5, 0.08, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.45, -0.5, 0.08, 0.47, 0.13, 0, -0.5, 0.13, 0, -0.45, 0.5, 0, -0.45, 0.5, 0, -0.45, 0.5, 0, -0.5, 0.13, 0, -0.5, 0.5, 0.08, -0.47, 0.13, 0.08, -0.47, 0.13, 0.08, -0.5, 0.13, 0.08, -0.5, 0.5, 0.08, -0.5, 0.5, 0.08, -0.47, 0.5, 0, -0.5, 0.5, 0, -0.45, 0.5, 0.08, -0.47, 0.5, 0.08, -0.47, 0.5, 0.08, -0.5, 0.5, 0, -0.5, -0.13, 0, -0.45, -0.5, 0, -0.45, -0.5, 0.08, -0.47, -0.5, 0.08, -0.47, -0.13, 0.08, -0.47, -0.13, 0, -0.45, -0.13, 0, -0.5, -0.13, 0, -0.45, -0.13, 0.08, -0.47, -0.13, 0.08, -0.47, -0.13, 0.08, -0.5, -0.13, 0, -0.5, -0.5, 0.08, -0.5, -0.5, 0, -0.5, -0.13, 0, -0.5, -0.13, 0, -0.5, -0.13, 0.08, -0.5, -0.5, 0.08, -0.5, 0.5, 0.08, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.08, 0.5, 0.5, 0.08, 0.5)
+
+[node name="road_drivewaySingleBarrier" type="StaticBody3D"]
+
+[node name="road_drivewaySingleBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+mesh = SubResource("ArrayMesh_f3fme")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_5y0n4")

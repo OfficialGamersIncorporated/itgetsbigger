@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=4 uid="uid://cyxuip6pbxueh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdy4l"]
+resource_name = "pavement"
+albedo_color = Color(0.884383, 0.884383, 0.906332, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jynac"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.33, 1),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYAAAACAAUABQAEAAAABgABAAAAAAAEAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4ADwANAAgACAAKAA8ACQAMAA4ADgALAAkADwAKAAsACwAOAA8ACQAIAA0ADQAMAAkAAgADAAcABwAFAAIABwADAAEAAQAGAAcA"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AADvwQAAAAAAAO/BzAwAAP//AAAAAAAA//8AAMwMAAAAAP//AAAAAP//Dz4AAAAAAAD//64HAAD//w8+rgcAAP//AAD//wAA//8PPv//AAD//wAAMvMAAP//Dz5Q+AAAAAD/////AAAAAO/B//8AAAAA//9Q+AAAAADvwTLzAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m8lj3"]
+resource_name = "road_slantBarrier_Mesh road_slantBarrier"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.33, 1),
+"attribute_data": PackedByteArray("3QaaBPoSmgTdBg/5+hIP+SH5AAAh+XX03PEAANzxdfTdBgWG3QYMcyH5u0oh+cI3+hK7St0Gu0oiDsI33QbCN90GBYbdBgxz+hIFhiIODHMh+cI3Ifm7StzxwjcE7btKIfmaBCH5D/kE7ZoEBO0P+d0GAAAiDgAA3QZ19CIOdfRNAAZuAAB4Whfy6zDK8V0dIfkFht0Gu0oh+Qxz3QbCNwTtBYbc8QxzIfkFhiH5DHOx/wZu5w3rMP//eFo0Dl0d"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGQAbABoAHgAcAB0AHQAfAB4AIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4A"),
+"material": SubResource("StandardMaterial3D_hdy4l"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(41.6019, 42.4967, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AADvwQAA0s8AAO/BzAzSz///AAAAANLP//8AAMwM0s8AAP//AADSz///Dz4AANLPAAD//64H0s///w8+rgfSz///AAAAAP////8PPgAA//8AAO/BAAD//wAA//8AAP//AADvwcwM/78AAO/BAAD/vwAA//+uB/+/AAD//wAA/7///wAA////v///Dz7///+///8AADLz/7///w8+UPj/vwAA//////+/AADvwf///78AAP//UPj/vwAA78Ey8/+/AADvwf//0s///wAA///SzwAA78Ey89LP//8AADLz0s8AAP/////SzwAA//9Q+NLP//8PPv//0s///w8+UPjSz///AAAy83j9//8PPlD4eP0AAO/BMvN4/QAA//9Q+Hj9//8AAP//AIAAAO/B//8AgP//Dz7//wCAAAD/////AID//wAAzAz/v///Dz6uB/+///8AAAAA/7///w8+AAD/v///AADMDEeKAADvwcwMR4r//w8+rgdHigAA//+uB0eK+DH72Pgx+9j4MfvY+DH72AbOAycGzgMnBs4DJwbOAyf/f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///+DH72Pgx+9j4MfvY+DH72AbOAycGzgMnBs4DJwbOAydkjm8AZI5vAGSObwBkjm8A/3////9/////f////3////9/AAD/fwAA/38AAP9/AACx5pZjseaWY7HmlmOx5pZj")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jynac")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ppmfd"]
+data = PackedVector3Array(0.5, 0, -0.5, -0.5, 0.25, -0.5, -0.5, 0.25, -0.45, -0.5, 0.25, -0.45, 0.5, 0, -0.45, 0.5, 0, -0.5, -0.5, 0.33, -0.47, -0.5, 0.33, -0.5, 0.5, 0.08, -0.5, 0.5, 0.08, -0.5, 0.5, 0.08, -0.47, -0.5, 0.33, -0.47, -0.5, 0.25, -0.5, 0.5, 0, -0.5, 0.5, 0.08, -0.5, 0.5, 0.08, -0.5, -0.5, 0.33, -0.5, -0.5, 0.25, -0.5, -0.5, 0.33, -0.47, -0.5, 0.25, -0.45, -0.5, 0.25, -0.5, -0.5, 0.25, -0.5, -0.5, 0.33, -0.5, -0.5, 0.33, -0.47, 0.5, 0, 0.45, 0.5, 0, 0.5, 0.5, 0.08, 0.5, 0.5, 0.08, 0.5, 0.5, 0.08, 0.47, 0.5, 0, 0.45, -0.5, 0.33, 0.47, -0.5, 0.33, 0.5, -0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, 0.25, 0.45, -0.5, 0.33, 0.47, -0.5, 0.25, 0.45, -0.5, 0.25, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.45, -0.5, 0.25, 0.45, 0.5, 0.08, 0.5, -0.5, 0.33, 0.5, -0.5, 0.33, 0.47, -0.5, 0.33, 0.47, 0.5, 0.08, 0.47, 0.5, 0.08, 0.5, -0.5, 0.25, 0.45, 0.5, 0, 0.45, 0.5, 0.08, 0.47, 0.5, 0.08, 0.47, -0.5, 0.33, 0.47, -0.5, 0.25, 0.45, 0.5, 0.08, 0.5, 0.5, 0, 0.5, -0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, 0.33, 0.5, 0.5, 0.08, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.45, 0.5, 0.08, -0.47, 0.5, 0.08, -0.47, 0.5, 0.08, -0.5, 0.5, 0, -0.5, 0.5, 0.08, -0.47, 0.5, 0, -0.45, -0.5, 0.25, -0.45, -0.5, 0.25, -0.45, -0.5, 0.33, -0.47, 0.5, 0.08, -0.47)
+
+[node name="road_slantBarrier" type="StaticBody3D"]
+
+[node name="road_slantBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+mesh = SubResource("ArrayMesh_m8lj3")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ppmfd")

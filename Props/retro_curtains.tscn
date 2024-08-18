@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://scmcfp6gop1p"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_fs6rw"]
-[ext_resource type="Texture2D" uid="uid://btv3oipqd74sr" path="res://Props/Curtains/Apt Retro Curtains color + AO.png" id="2_w1m60"]
-[ext_resource type="Texture2D" uid="uid://ffvvlgkvwat6" path="res://Props/Curtains/Apt Retro Curtains normal.png" id="3_ktfnw"]
+[ext_resource type="Texture2D" uid="uid://btv3oipqd74sr" path="res://Props/Textures/Curtains/Apt Retro Curtains color + AO.png" id="2_w1m60"]
+[ext_resource type="Texture2D" uid="uid://ffvvlgkvwat6" path="res://Props/Textures/Curtains/Apt Retro Curtains normal.png" id="3_ktfnw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35ut8"]
 resource_name = "Apt Retro Curtains.002"

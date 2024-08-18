@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=4 uid="uid://duarwny2gy6pa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1ly2"]
+resource_name = "pavement"
+albedo_color = Color(0.884383, 0.884383, 0.906332, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_chrsv"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.52, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABAADAAEAAQAFAAQABAAFAAYABgAHAAQAAgADAAQABAAHAAIABgAFAAEAAQAAAAYABgAAAAIAAgAHAAYA"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAAAAAAA//8AAAAA//8AAAAAAAAAAAAAAAD//wAAAAAAAP//AAD//wAA///YCf//AAD//9gJAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l76r7"]
+resource_name = "tile_slantHigh_Mesh tile_slantHigh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.52, 1),
+"attribute_data": PackedByteArray("//9AH///94QAAEAfAAD3hP//KSP//8XmAAApIwAAxeYAAPeEAAANgf//94T//w2B///3hAAA94T//0AfAAANgf//94QAAPeE//8NgQAAQB8AAAAA//8AAAAAsdr//7Ha"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYA"),
+"material": SubResource("StandardMaterial3D_d1ly2"),
+"name": "pavement",
+"primitive": 3,
+"uv_scale": Vector4(39.3701, 51.5248, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD//////78AAAAA////vwAA//8AAP+/AAAAAAAA/78AAAAAAAD//wAAAAD///////8AAAAA/////wAA////////AAD///+////YCf///7///wAAAAD/v///2AkAAP+/AAAAAAAA/////wAAAAD//wAA//8AAP/////YCQAA/////wAA//8AgAAAAAD//wCA///YCf//AIAAAP////8AgAAA/////2jLAAD//wAAaMv//9gJ//9oy///2AkAAGjL/3////9/////f////3////9//z//f/8//3//P/9//z//fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9////AxmAjwMZgI8DGYCPAxmAj")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_chrsv")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4vmn7"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.52, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.52, 0.5, 0.5, 0.019953, -0.5, 0.5, 0, 0.5, 0.5, 0.019953, 0.5)
+
+[node name="tile_slantHigh" type="StaticBody3D"]
+
+[node name="tile_slantHigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+mesh = SubResource("ArrayMesh_l76r7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_4vmn7")

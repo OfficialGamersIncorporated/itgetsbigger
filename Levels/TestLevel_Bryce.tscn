@@ -1,0 +1,362 @@
+[gd_scene load_steps=73 format=3 uid="uid://c30etlmxgdng5"]
+
+[ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_daa2c"]
+[ext_resource type="Script" path="res://PropManager.gd" id="2_vxs3f"]
+[ext_resource type="PackedScene" uid="uid://djft1p7ciiwio" path="res://Props/retro_desk.tscn" id="3_vhmr3"]
+[ext_resource type="PackedScene" uid="uid://dpkog6ppiexy1" path="res://Props/retro_chair.tscn" id="4_f1y4k"]
+[ext_resource type="PackedScene" uid="uid://dqfsyw2dvfd0r" path="res://Props/plastic_blinds.tscn" id="5_o3wgl"]
+[ext_resource type="PackedScene" uid="uid://bijj0eo53agta" path="res://Props/retro_bed.tscn" id="6_836yj"]
+[ext_resource type="PackedScene" uid="uid://cpc635r6xqlql" path="res://Props/retro_nightstand.tscn" id="7_voatn"]
+[ext_resource type="PackedScene" uid="uid://bdim3qh0boydx" path="res://Props/retro_filing_cabinet.tscn" id="8_iinfc"]
+[ext_resource type="PackedScene" uid="uid://dqe5kjn42vyd4" path="res://Props/retro_lamp.tscn" id="9_1op5e"]
+[ext_resource type="PackedScene" uid="uid://scmcfp6gop1p" path="res://Props/retro_curtains.tscn" id="10_v4aas"]
+[ext_resource type="PackedScene" uid="uid://bgg86rqtdc0dq" path="res://Enemies/StaticEnemy.tscn" id="11_yqvpa"]
+[ext_resource type="PackedScene" uid="uid://mb0pe3vve3rc" path="res://FloorSections/FloorSection_Walled.tscn" id="12_qwxwe"]
+[ext_resource type="Material" uid="uid://h7hf4e36crac" path="res://FloorSections/TileGrass.tres" id="13_q5om3"]
+[ext_resource type="PackedScene" uid="uid://bs8yqy2hhrjji" path="res://Props/Vehicles/delivery.tscn" id="14_brh3k"]
+[ext_resource type="PackedScene" uid="uid://dqr7ddim1j10o" path="res://Props/Vehicles/delivery_flat.tscn" id="15_3lj7a"]
+[ext_resource type="PackedScene" uid="uid://dpvqi4aa7m6i5" path="res://Props/Vehicles/ambulance.tscn" id="16_unh0o"]
+[ext_resource type="PackedScene" uid="uid://drfcnl2xl0h12" path="res://Props/Vehicles/firetruck.tscn" id="17_olyry"]
+[ext_resource type="PackedScene" uid="uid://c2t2qamx5i8ik" path="res://Props/Vehicles/garbage_truck.tscn" id="18_ykiju"]
+[ext_resource type="PackedScene" uid="uid://bb1bh137wsbrt" path="res://Props/Vehicles/hatchback_sport.tscn" id="19_3co5q"]
+[ext_resource type="PackedScene" uid="uid://cup44aipi7ng" path="res://Props/Vehicles/police.tscn" id="20_e5b63"]
+[ext_resource type="PackedScene" uid="uid://dgyifvsr4im8b" path="res://Props/Vehicles/racecar.tscn" id="21_l5m76"]
+[ext_resource type="PackedScene" uid="uid://b4yklmpllq7ri" path="res://Props/Vehicles/racecar_blue.tscn" id="22_m6iyx"]
+[ext_resource type="PackedScene" uid="uid://bd5asrwdk8sgd" path="res://Props/Vehicles/sedan.tscn" id="23_0cofi"]
+[ext_resource type="PackedScene" uid="uid://cewrb7ofvf76c" path="res://Props/Vehicles/sedan_sport.tscn" id="24_nwv8p"]
+[ext_resource type="PackedScene" uid="uid://cxgyiebi5al10" path="res://Props/Vehicles/suv.tscn" id="25_sx8hi"]
+[ext_resource type="PackedScene" uid="uid://tf37gps4g77p" path="res://Props/Vehicles/suv_luxury.tscn" id="26_h3578"]
+[ext_resource type="PackedScene" uid="uid://coufmv3ulmyif" path="res://Props/Vehicles/taxi.tscn" id="27_2dyfk"]
+[ext_resource type="PackedScene" uid="uid://boufrhpdruu7p" path="res://Props/Vehicles/tractor.tscn" id="28_go2x5"]
+[ext_resource type="PackedScene" uid="uid://wjlor6slmpg1" path="res://Props/Vehicles/tractor_police.tscn" id="29_lsggo"]
+[ext_resource type="PackedScene" uid="uid://xoxk3mpkgd55" path="res://Props/Vehicles/tractor_shovel.tscn" id="30_s8l0i"]
+[ext_resource type="PackedScene" uid="uid://dkmuwvg3vofec" path="res://Props/Vehicles/truck.tscn" id="31_rjpxg"]
+[ext_resource type="PackedScene" uid="uid://bn2lkk6o5uwhv" path="res://Props/Vehicles/truck_flat.tscn" id="32_yqn3s"]
+[ext_resource type="PackedScene" uid="uid://ci7m5fxqvdgwk" path="res://Props/Vehicles/van.tscn" id="33_i64ko"]
+[ext_resource type="PackedScene" uid="uid://j7sci6jd0wpv" path="res://Props/Junk/axle.tscn" id="34_ebqvm"]
+[ext_resource type="PackedScene" uid="uid://xjk0dd1cqbgq" path="res://Props/Junk/bolt.tscn" id="35_58vgi"]
+[ext_resource type="PackedScene" uid="uid://bvrfkle6wcjhc" path="res://Props/Junk/bumper.tscn" id="36_w3toc"]
+[ext_resource type="PackedScene" uid="uid://dsdm228li8hxq" path="res://Props/Junk/car_door.tscn" id="37_hcuc5"]
+[ext_resource type="PackedScene" uid="uid://knw5w452jtlp" path="res://Props/Junk/cone.tscn" id="38_1w1wu"]
+[ext_resource type="PackedScene" uid="uid://re3aggc675sb" path="res://Props/Junk/cone_flat.tscn" id="39_thjyc"]
+[ext_resource type="PackedScene" uid="uid://b21ahvmsratah" path="res://Props/Junk/nut.tscn" id="40_d2hjo"]
+[ext_resource type="PackedScene" uid="uid://d0ur2nlxxh60x" path="res://Props/Junk/tire_empty.tscn" id="41_wc8s2"]
+[ext_resource type="PackedScene" uid="uid://bywb6aj78fa1" path="res://Props/Junk/wheel.tscn" id="42_0e46j"]
+[ext_resource type="PackedScene" uid="uid://box2mk0anec6f" path="res://Props/Junk/wheel_2.tscn" id="43_ck7pb"]
+[ext_resource type="PackedScene" uid="uid://v50ahlsbrvq1" path="res://Props/Junk/wheel_big.tscn" id="44_fg02p"]
+[ext_resource type="PackedScene" uid="uid://ekynqejkmojg" path="res://Props/Junk/wheel_small.tscn" id="45_xw147"]
+[ext_resource type="PackedScene" uid="uid://g5ek7dnapvvo" path="res://Props/Roads/road_driveway_single.tscn" id="63_vmr4p"]
+[ext_resource type="PackedScene" uid="uid://swviytlq37vb" path="res://Props/Roads/road_slant_curve.tscn" id="64_khmff"]
+[ext_resource type="PackedScene" uid="uid://pkng8njhxrkk" path="res://Props/Roads/road_driveway_single_barrier.tscn" id="65_cr411"]
+[ext_resource type="PackedScene" uid="uid://bxr0vbmwiw7wh" path="res://Props/Roads/road_slant_curve_barrier.tscn" id="66_qxc1x"]
+[ext_resource type="PackedScene" uid="uid://eji8riuwoxh7" path="res://Props/Roads/road_slant_flat.tscn" id="67_tbhu7"]
+[ext_resource type="PackedScene" uid="uid://crn2n3jo30xia" path="res://Props/Roads/road_slant_flat_high.tscn" id="68_lleqq"]
+[ext_resource type="PackedScene" uid="uid://dndjxlk7wkbrw" path="res://Props/Roads/road_slant_high.tscn" id="69_6i5x1"]
+[ext_resource type="PackedScene" uid="uid://h112ev0d06al" path="res://Props/Roads/road_bend_square.tscn" id="95_pv2rf"]
+[ext_resource type="PackedScene" uid="uid://dx5a6456yfe3g" path="res://Props/Roads/road_bend_square_barrier.tscn" id="96_rge75"]
+[ext_resource type="PackedScene" uid="uid://cs6yvdb7ex7cw" path="res://Props/Roads/road_bridge.tscn" id="97_puukq"]
+[ext_resource type="PackedScene" uid="uid://dfxgivfcwrcyi" path="res://Props/Roads/road_crossing.tscn" id="98_ikh2b"]
+[ext_resource type="PackedScene" uid="uid://diueuis5sriir" path="res://Props/Roads/road_crossroad.tscn" id="99_4ekwh"]
+[ext_resource type="PackedScene" uid="uid://ctoqu8rskx4hr" path="res://Props/Roads/road_crossroad_barrier.tscn" id="100_3qiqd"]
+[ext_resource type="PackedScene" uid="uid://cxelo5d7v7o18" path="res://Props/Roads/road_crossroad_line.tscn" id="101_62kf7"]
+[ext_resource type="PackedScene" uid="uid://dxrkekgg5p5jq" path="res://Props/Roads/road_crossroad_path.tscn" id="102_vsqge"]
+[ext_resource type="PackedScene" uid="uid://ilc5a7wfei5e" path="res://Props/Roads/road_curve.tscn" id="103_1ajj1"]
+[ext_resource type="PackedScene" uid="uid://dpjl7funeji8v" path="res://Props/Roads/road_curve_barrier.tscn" id="104_2ocs6"]
+[ext_resource type="PackedScene" uid="uid://dhindbccf6vkd" path="res://Props/Roads/road_curve_intersection.tscn" id="105_3ubpg"]
+[ext_resource type="PackedScene" uid="uid://6iou114y8kvy" path="res://Props/Roads/road_curve_intersection_barrier.tscn" id="106_f24vu"]
+[ext_resource type="PackedScene" uid="uid://bnd0bcppwtipo" path="res://Props/Roads/road_curve_pavement.tscn" id="107_nrwal"]
+[ext_resource type="PackedScene" uid="uid://cnvo08nke6wnu" path="res://Props/Roads/road_driveway_double.tscn" id="108_8k25i"]
+[ext_resource type="PackedScene" uid="uid://d37lag1v2t2k3" path="res://Props/Roads/road_driveway_double_barrier.tscn" id="109_03dkp"]
+[ext_resource type="PackedScene" uid="uid://bbbwxh7xv2blf" path="res://Props/Roads/road_bend.tscn" id="111_0yr4p"]
+[ext_resource type="PackedScene" uid="uid://b0vaa0hq18imf" path="res://Props/Roads/road_bend_barrier.tscn" id="112_vb6qv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j07cq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_na6cy"]
+sky_material = SubResource("ProceduralSkyMaterial_j07cq")
+
+[sub_resource type="Environment" id="Environment_udpdw"]
+background_mode = 2
+sky = SubResource("Sky_na6cy")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_udpdw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_daa2c")]
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+script = ExtResource("2_vxs3f")
+
+[node name="Retro Desk" parent="Props" instance=ExtResource("3_vhmr3")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -12.1822, -1, 4.25233)
+
+[node name="Retro Desk2" parent="Props" instance=ExtResource("3_vhmr3")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -15.784, -1, -3.25019)
+
+[node name="Retro Chair" parent="Props" instance=ExtResource("4_f1y4k")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -17.1822, -1, 3.25233)
+
+[node name="Retro Chair2" parent="Props" instance=ExtResource("4_f1y4k")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -14.1822, -1, -3.74767)
+
+[node name="Plastic Blinds" parent="Props" instance=ExtResource("5_o3wgl")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -16.1822, 1.3455, -0.747672)
+
+[node name="Retro Bed" parent="Props" instance=ExtResource("6_836yj")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, 10.5538, -1, 1.38011)
+
+[node name="Retro Bed2" parent="Props" instance=ExtResource("6_836yj")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -13.1822, -1, 7.25233)
+
+[node name="Retro Nightstand" parent="Props" instance=ExtResource("7_voatn")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -15.1822, -1, 0.252328)
+
+[node name="Retro Nightstand2" parent="Props" instance=ExtResource("7_voatn")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -8.18219, -1, -3.74767)
+
+[node name="Retro Filing Cabinet" parent="Props" instance=ExtResource("8_iinfc")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -8.58569, -1, 4.04705)
+
+[node name="Retro Lamp" parent="Props" instance=ExtResource("9_1op5e")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -10.1822, -1, -1.74767)
+
+[node name="Retro Lamp2" parent="Props" instance=ExtResource("9_1op5e")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -14.1822, -1, 3.25233)
+
+[node name="Retro Curtains" parent="Props" instance=ExtResource("10_v4aas")]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -12.1822, 1, -2.74767)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("11_yqvpa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorSection_Walled" parent="." instance=ExtResource("12_qwxwe")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 4, -28.493, -1, 41.5715)
+
+[node name="FloorSection_Walled2" parent="." instance=ExtResource("12_qwxwe")]
+transform = Transform3D(13.115, 0, 0, 0, 1, 0, 0, 0, 6, 4.86797, -0.777025, 0)
+
+[node name="FloorSection_Walled3" parent="." instance=ExtResource("12_qwxwe")]
+transform = Transform3D(14.305, 0, 0, 0, 1, 0, 0, 0, 26.946, -21.0385, -1, 0)
+
+[node name="FloorSection_Walled4" parent="." instance=ExtResource("12_qwxwe")]
+transform = Transform3D(14.305, 0, 0, 0, 1, 0, 0, 0, 26.946, 31.5822, -1, 9.23551)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.87296, -1, -6)
+material_override = ExtResource("13_q5om3")
+use_collision = true
+size = Vector3(24.287, 1, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -0.5, 6)
+material_override = ExtResource("13_q5om3")
+use_collision = true
+size = Vector3(4, 1, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.5, 6)
+material_override = ExtResource("13_q5om3")
+use_collision = true
+size = Vector3(4, 1, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.5, 10)
+use_collision = true
+size = Vector3(2, 1, 8)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 18)
+use_collision = true
+size = Vector3(2, 1, 8)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1.5, 12)
+use_collision = true
+size = Vector3(2, 1, 8)
+
+[node name="PropTest" type="Node" parent="."]
+
+[node name="Ambulance" parent="PropTest" instance=ExtResource("16_unh0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7246, -1, -1.53735)
+
+[node name="Delivery" parent="PropTest" instance=ExtResource("14_brh3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9899, -1, -2.35379)
+
+[node name="DeliveryFlat" parent="PropTest" instance=ExtResource("15_3lj7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7356, -1, 4.83314)
+
+[node name="Firetruck" parent="PropTest" instance=ExtResource("17_olyry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0309, -1, -16.1296)
+
+[node name="GarbageTruck" parent="PropTest" instance=ExtResource("18_ykiju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4542, -1, -15.8129)
+
+[node name="Hatchback-sport" parent="PropTest" instance=ExtResource("19_3co5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0585, -1, -14.8891)
+
+[node name="Police" parent="PropTest" instance=ExtResource("20_e5b63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1635, -1, -15.0127)
+
+[node name="racecar" parent="PropTest" instance=ExtResource("21_l5m76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0949, -1, 11.0191)
+
+[node name="racecar-blue" parent="PropTest" instance=ExtResource("22_m6iyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0765, -1, -9.28959)
+
+[node name="sedan" parent="PropTest" instance=ExtResource("23_0cofi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9519, -1, 11.1235)
+
+[node name="Sedan-sport" parent="PropTest" instance=ExtResource("24_nwv8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8781, -1, 11.6476)
+
+[node name="suv" parent="PropTest" instance=ExtResource("25_sx8hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8918, -1, 11.3514)
+
+[node name="suv-luxury" parent="PropTest" instance=ExtResource("26_h3578")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1331, -1, 4.26272)
+
+[node name="taxi" parent="PropTest" instance=ExtResource("27_2dyfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6937, -1, -1.73821)
+
+[node name="tractor" parent="PropTest" instance=ExtResource("28_go2x5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8113, -1, -7.88214)
+
+[node name="tractor-police" parent="PropTest" instance=ExtResource("29_lsggo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4316, -1, -9.72876)
+
+[node name="tractor-shovel" parent="PropTest" instance=ExtResource("30_s8l0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7414, -1, 3.7739)
+
+[node name="truck" parent="PropTest" instance=ExtResource("31_rjpxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1159, -1, -7.1421)
+
+[node name="truck-flat" parent="PropTest" instance=ExtResource("32_yqn3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.3379, -1, -2.25717)
+
+[node name="van" parent="PropTest" instance=ExtResource("33_i64ko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2663, -1, 4.81287)
+
+[node name="axle" parent="PropTest" instance=ExtResource("34_ebqvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3054, -1, 16.2009)
+
+[node name="bolt" parent="PropTest" instance=ExtResource("35_58vgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2956, -1, 17.4893)
+
+[node name="bumper" parent="PropTest" instance=ExtResource("36_w3toc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0381, -1, 17.6055)
+
+[node name="car-door" parent="PropTest" instance=ExtResource("37_hcuc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 16.2115)
+
+[node name="cone" parent="PropTest" instance=ExtResource("38_1w1wu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8131, -1, 16.2326)
+
+[node name="cone-flat" parent="PropTest" instance=ExtResource("39_thjyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9999, -1, 16.3593)
+
+[node name="nut" parent="PropTest" instance=ExtResource("40_d2hjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7148, -1, 17.4999)
+
+[node name="tire-empty" parent="PropTest" instance=ExtResource("41_wc8s2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 18.5454)
+
+[node name="wheel" parent="PropTest" instance=ExtResource("42_0e46j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5694, -1, 18.4081)
+
+[node name="wheel-2" parent="PropTest" instance=ExtResource("43_ck7pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.545, -1, 18.4503)
+
+[node name="wheel-big" parent="PropTest" instance=ExtResource("44_fg02p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6254, -1, 18.3342)
+
+[node name="wheel-small" parent="PropTest" instance=ExtResource("45_xw147")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9081, -1, 18.3975)
+
+[node name="PropTest2" type="Node" parent="."]
+
+[node name="road_bend" parent="PropTest2" instance=ExtResource("111_0yr4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -1, 40)
+
+[node name="Road_bend_barrier" parent="PropTest2" instance=ExtResource("112_vb6qv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -1, 40)
+
+[node name="road_bendSquare" parent="PropTest2" instance=ExtResource("95_pv2rf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32, -1, 40)
+
+[node name="road_bendSquareBarrier" parent="PropTest2" instance=ExtResource("96_rge75")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32, -1, 40)
+
+[node name="road_bridge" parent="PropTest2" instance=ExtResource("97_puukq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, -1, 48)
+
+[node name="road_crossing" parent="PropTest2" instance=ExtResource("98_ikh2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 3, 48)
+
+[node name="road_crossing2" parent="PropTest2" instance=ExtResource("98_ikh2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, 48)
+
+[node name="road_crossroad" parent="PropTest2" instance=ExtResource("99_4ekwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 3, 48)
+
+[node name="road_crossroadBarrier" parent="PropTest2" instance=ExtResource("100_3qiqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 3, 48)
+
+[node name="road_crossroadLine" parent="PropTest2" instance=ExtResource("101_62kf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 48)
+
+[node name="road_crossroadPath" parent="PropTest2" instance=ExtResource("102_vsqge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 48)
+
+[node name="road_curve" parent="PropTest2" instance=ExtResource("103_1ajj1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, -1, 60)
+
+[node name="road_curveBarrier" parent="PropTest2" instance=ExtResource("104_2ocs6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, -1, 60)
+
+[node name="road_curveIntersection" parent="PropTest2" instance=ExtResource("105_3ubpg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, -1, 60)
+
+[node name="road_curveIntersectionBarrier" parent="PropTest2" instance=ExtResource("106_f24vu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, -1, 60)
+
+[node name="road_curvePavement" parent="PropTest2" instance=ExtResource("107_nrwal")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 52, -1, 44)
+
+[node name="road_drivewayDouble" parent="PropTest2" instance=ExtResource("108_8k25i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -1, 64)
+
+[node name="road_drivewayDoubleBarrier" parent="PropTest2" instance=ExtResource("109_03dkp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -1, 64)
+
+[node name="road_drivewayDoubleBarrier2" parent="PropTest2" instance=ExtResource("109_03dkp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32, -1, 48)
+
+[node name="road_drivewaySingle" parent="PropTest2" instance=ExtResource("63_vmr4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, -1, 64)
+
+[node name="road_slantCurve" parent="PropTest2" instance=ExtResource("64_khmff")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 68, -1, 40)
+
+[node name="road_drivewaySingleBarrier" parent="PropTest2" instance=ExtResource("65_cr411")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, -1, 64)
+
+[node name="road_slantCurveBarrier" parent="PropTest2" instance=ExtResource("66_qxc1x")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 68, -1, 40)
+
+[node name="road_slantFlat" parent="." instance=ExtResource("67_tbhu7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 80, -1, 64)
+
+[node name="road_slantFlatHigh" parent="." instance=ExtResource("68_lleqq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 88, 1, 64)
+
+[node name="road_slantHigh" parent="." instance=ExtResource("69_6i5x1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24, -1, 56)

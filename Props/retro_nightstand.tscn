@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://cpc635r6xqlql"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_y2jsd"]
-[ext_resource type="Texture2D" uid="uid://7l73nwebdw5m" path="res://Props/Nightstand/Apt Retro Nightstand color + AO.png" id="2_f5n6h"]
-[ext_resource type="Texture2D" uid="uid://dh7yceku327q7" path="res://Props/Nightstand/Apt Retro Nightstand normal.png" id="3_vmd2e"]
+[ext_resource type="Texture2D" uid="uid://7l73nwebdw5m" path="res://Props/Textures/Nightstand/Apt Retro Nightstand color + AO.png" id="2_f5n6h"]
+[ext_resource type="Texture2D" uid="uid://dh7yceku327q7" path="res://Props/Textures/Nightstand/Apt Retro Nightstand normal.png" id="3_vmd2e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eur46"]
 resource_name = "Apt Retro Nightstand.001"
