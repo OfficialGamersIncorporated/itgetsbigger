@@ -8,5 +8,5 @@ render_priority = 0
 shader = ExtResource("1_h36it")
 shader_parameter/Color = Color(0.787759, 0.787759, 0.787759, 1)
 shader_parameter/Roughness = 0.1
-shader_parameter/TriplanarScale = 5.0
+shader_parameter/TriplanarScale = 4.0
 shader_parameter/NormalMap = ExtResource("2_qnu4o")
