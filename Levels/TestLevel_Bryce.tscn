@@ -115,12 +115,12 @@
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_na6cy"]
+[sub_resource type="Sky" id="Sky_fjomm"]
 sky_material = SubResource("ProceduralSkyMaterial_j07cq")
 
 [sub_resource type="Environment" id="Environment_udpdw"]
 background_mode = 2
-sky = SubResource("Sky_na6cy")
+sky = SubResource("Sky_fjomm")
 
 [node name="Node3D" type="Node3D"]
 
@@ -176,6 +176,225 @@ transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -14.18
 [node name="Retro Curtains" parent="Props" instance=ExtResource("10_v4aas")]
 transform = Transform3D(1, 0, 0, 0, -1.19209e-07, 1, 0, -1, -1.19209e-07, -12.1822, 1, -2.74767)
 
+[node name="Ambulance" parent="Props" instance=ExtResource("16_unh0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7246, -1, 2.46265)
+
+[node name="Delivery" parent="Props" instance=ExtResource("14_brh3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9899, -1, 1.64621)
+
+[node name="DeliveryFlat" parent="Props" instance=ExtResource("15_3lj7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7356, -1, 8.83314)
+
+[node name="Firetruck" parent="Props" instance=ExtResource("17_olyry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0309, -1, -12.1296)
+
+[node name="GarbageTruck" parent="Props" instance=ExtResource("18_ykiju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4542, -1, -11.8129)
+
+[node name="Hatchback-sport" parent="Props" instance=ExtResource("19_3co5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0585, -1, -10.8891)
+
+[node name="Police" parent="Props" instance=ExtResource("20_e5b63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1635, -1, -11.0127)
+
+[node name="racecar" parent="Props" instance=ExtResource("21_l5m76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0949, -1, 15.0191)
+
+[node name="racecar-blue" parent="Props" instance=ExtResource("22_m6iyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0765, -1, -5.28959)
+
+[node name="sedan" parent="Props" instance=ExtResource("23_0cofi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9914, -1, 15.1235)
+
+[node name="Sedan-sport" parent="Props" instance=ExtResource("24_nwv8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8781, -1, 15.6476)
+
+[node name="suv" parent="Props" instance=ExtResource("25_sx8hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8918, -1, 15.3514)
+
+[node name="suv-luxury" parent="Props" instance=ExtResource("26_h3578")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1331, -1, 8.26272)
+
+[node name="taxi" parent="Props" instance=ExtResource("27_2dyfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6937, -1, 2.26179)
+
+[node name="tractor" parent="Props" instance=ExtResource("28_go2x5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8113, -1, -3.88214)
+
+[node name="tractor-police" parent="Props" instance=ExtResource("29_lsggo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4316, -1, -5.72876)
+
+[node name="tractor-shovel" parent="Props" instance=ExtResource("30_s8l0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7414, -1, 7.7739)
+
+[node name="truck" parent="Props" instance=ExtResource("31_rjpxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1159, -1, -3.1421)
+
+[node name="truck-flat" parent="Props" instance=ExtResource("32_yqn3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.3379, -1, 1.74283)
+
+[node name="van" parent="Props" instance=ExtResource("33_i64ko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2663, -1, 8.81287)
+
+[node name="axle" parent="Props" instance=ExtResource("34_ebqvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3054, -1, 20.2009)
+
+[node name="bolt" parent="Props" instance=ExtResource("35_58vgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2956, -1, 21.4893)
+
+[node name="bumper" parent="Props" instance=ExtResource("36_w3toc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0381, -1, 21.6055)
+
+[node name="car-door" parent="Props" instance=ExtResource("37_hcuc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 20.2115)
+
+[node name="cone" parent="Props" instance=ExtResource("38_1w1wu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8131, -1, 20.2326)
+
+[node name="cone-flat" parent="Props" instance=ExtResource("39_thjyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9999, -1, 20.3593)
+
+[node name="nut" parent="Props" instance=ExtResource("40_d2hjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7148, -1, 21.4999)
+
+[node name="tire-empty" parent="Props" instance=ExtResource("41_wc8s2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 22.5454)
+
+[node name="wheel" parent="Props" instance=ExtResource("42_0e46j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5694, -1, 22.4081)
+
+[node name="wheel-2" parent="Props" instance=ExtResource("43_ck7pb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.545, -1, 22.4503)
+
+[node name="wheel-big" parent="Props" instance=ExtResource("44_fg02p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6254, -1, 22.3342)
+
+[node name="wheel-small" parent="Props" instance=ExtResource("45_xw147")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9081, -1, 22.3975)
+
+[node name="house_type01" parent="Props" instance=ExtResource("90_uyk2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, -1.78629)
+
+[node name="house_type02" parent="Props" instance=ExtResource("91_hwi6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9762, -0.721691, -2.78629)
+
+[node name="house_type03" parent="Props" instance=ExtResource("92_lboy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.9762, -0.721691, -2.78629)
+
+[node name="house_type04" parent="Props" instance=ExtResource("93_fnfdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.9762, -0.721691, -1.78629)
+
+[node name="house_type05" parent="Props" instance=ExtResource("94_kavek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.976, -0.721691, -2.78629)
+
+[node name="house_type06" parent="Props" instance=ExtResource("95_d6lds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.976, -0.721691, -3.78629)
+
+[node name="house_type07" parent="Props" instance=ExtResource("96_scqnr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.976, -0.721691, -3.78629)
+
+[node name="house_type08" parent="Props" instance=ExtResource("97_diqam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.976, -0.721691, -2.78629)
+
+[node name="house_type09" parent="Props" instance=ExtResource("98_7bfkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.976, -0.721691, -2.78629)
+
+[node name="house_type10" parent="Props" instance=ExtResource("99_g1rui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, 14.2137)
+
+[node name="house_type11" parent="Props" instance=ExtResource("100_4wroh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9762, -0.721691, 14.2137)
+
+[node name="house_type12" parent="Props" instance=ExtResource("101_13su1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.9762, -0.721691, 13.2137)
+
+[node name="house_type13" parent="Props" instance=ExtResource("102_bqa37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.9762, -0.721691, 13.2137)
+
+[node name="house_type14" parent="Props" instance=ExtResource("103_uy1br")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.976, -0.721691, 13.2137)
+
+[node name="house_type15" parent="Props" instance=ExtResource("104_nesyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.976, -0.721691, 13.2137)
+
+[node name="house_type16" parent="Props" instance=ExtResource("105_055d2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.976, -0.721691, 14.2137)
+
+[node name="house_type17" parent="Props" instance=ExtResource("106_wo2cj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.976, -0.721691, 14.2137)
+
+[node name="house_type18" parent="Props" instance=ExtResource("107_2ex5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.976, -0.721691, 13.2137)
+
+[node name="house_type19" parent="Props" instance=ExtResource("108_42kb4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, 29.2137)
+
+[node name="house_type20" parent="Props" instance=ExtResource("109_a5xnb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9762, -0.721691, 29.2137)
+
+[node name="house_type21" parent="Props" instance=ExtResource("110_sh8tf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.9762, -0.721691, 28.2137)
+
+[node name="Ambulance2" parent="Props" instance=ExtResource("16_unh0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="Delivery2" parent="Props" instance=ExtResource("14_brh3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="DeliveryFlat2" parent="Props" instance=ExtResource("15_3lj7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="Firetruck2" parent="Props" instance=ExtResource("17_olyry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="GarbageTruck2" parent="Props" instance=ExtResource("18_ykiju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="Hatchback-sport2" parent="Props" instance=ExtResource("19_3co5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="Police2" parent="Props" instance=ExtResource("20_e5b63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="racecar2" parent="Props" instance=ExtResource("21_l5m76")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="racecar-blue2" parent="Props" instance=ExtResource("22_m6iyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="sedan2" parent="Props" instance=ExtResource("23_0cofi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="Sedan-sport2" parent="Props" instance=ExtResource("24_nwv8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="suv2" parent="Props" instance=ExtResource("25_sx8hi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="suv-luxury2" parent="Props" instance=ExtResource("26_h3578")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="taxi2" parent="Props" instance=ExtResource("27_2dyfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="tractor2" parent="Props" instance=ExtResource("28_go2x5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="tractor-police2" parent="Props" instance=ExtResource("29_lsggo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="tractor-shovel2" parent="Props" instance=ExtResource("30_s8l0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="truck2" parent="Props" instance=ExtResource("31_rjpxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="truck-flat2" parent="Props" instance=ExtResource("32_yqn3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
+[node name="van2" parent="Props" instance=ExtResource("33_i64ko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 25.9402)
+
 [node name="StaticBody3D" parent="." instance=ExtResource("11_yqvpa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115, 0, 59)
 
@@ -225,104 +444,6 @@ size = Vector3(2, 1, 8)
 
 [node name="tile_low" parent="TestFloor" instance=ExtResource("14_23pcl")]
 transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 14, 143.093, -1, 33)
-
-[node name="PropTest" type="Node" parent="."]
-
-[node name="Ambulance" parent="PropTest" instance=ExtResource("16_unh0o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7246, -1, -1.53735)
-
-[node name="Delivery" parent="PropTest" instance=ExtResource("14_brh3k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9899, -1, -2.35379)
-
-[node name="DeliveryFlat" parent="PropTest" instance=ExtResource("15_3lj7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.7356, -1, 4.83314)
-
-[node name="Firetruck" parent="PropTest" instance=ExtResource("17_olyry")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0309, -1, -16.1296)
-
-[node name="GarbageTruck" parent="PropTest" instance=ExtResource("18_ykiju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4542, -1, -15.8129)
-
-[node name="Hatchback-sport" parent="PropTest" instance=ExtResource("19_3co5q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0585, -1, -14.8891)
-
-[node name="Police" parent="PropTest" instance=ExtResource("20_e5b63")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1635, -1, -15.0127)
-
-[node name="racecar" parent="PropTest" instance=ExtResource("21_l5m76")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0949, -1, 11.0191)
-
-[node name="racecar-blue" parent="PropTest" instance=ExtResource("22_m6iyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0765, -1, -9.28959)
-
-[node name="sedan" parent="PropTest" instance=ExtResource("23_0cofi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9914, -1, 11.1235)
-
-[node name="Sedan-sport" parent="PropTest" instance=ExtResource("24_nwv8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8781, -1, 11.6476)
-
-[node name="suv" parent="PropTest" instance=ExtResource("25_sx8hi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8918, -1, 11.3514)
-
-[node name="suv-luxury" parent="PropTest" instance=ExtResource("26_h3578")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1331, -1, 4.26272)
-
-[node name="taxi" parent="PropTest" instance=ExtResource("27_2dyfk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6937, -1, -1.73821)
-
-[node name="tractor" parent="PropTest" instance=ExtResource("28_go2x5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8113, -1, -7.88214)
-
-[node name="tractor-police" parent="PropTest" instance=ExtResource("29_lsggo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4316, -1, -9.72876)
-
-[node name="tractor-shovel" parent="PropTest" instance=ExtResource("30_s8l0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7414, -1, 3.7739)
-
-[node name="truck" parent="PropTest" instance=ExtResource("31_rjpxg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.1159, -1, -7.1421)
-
-[node name="truck-flat" parent="PropTest" instance=ExtResource("32_yqn3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.3379, -1, -2.25717)
-
-[node name="van" parent="PropTest" instance=ExtResource("33_i64ko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2663, -1, 4.81287)
-
-[node name="axle" parent="PropTest" instance=ExtResource("34_ebqvm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3054, -1, 16.2009)
-
-[node name="bolt" parent="PropTest" instance=ExtResource("35_58vgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2956, -1, 17.4893)
-
-[node name="bumper" parent="PropTest" instance=ExtResource("36_w3toc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0381, -1, 17.6055)
-
-[node name="car-door" parent="PropTest" instance=ExtResource("37_hcuc5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 16.2115)
-
-[node name="cone" parent="PropTest" instance=ExtResource("38_1w1wu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8131, -1, 16.2326)
-
-[node name="cone-flat" parent="PropTest" instance=ExtResource("39_thjyc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9999, -1, 16.3593)
-
-[node name="nut" parent="PropTest" instance=ExtResource("40_d2hjo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7148, -1, 17.4999)
-
-[node name="tire-empty" parent="PropTest" instance=ExtResource("41_wc8s2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6474, -1, 18.5454)
-
-[node name="wheel" parent="PropTest" instance=ExtResource("42_0e46j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5694, -1, 18.4081)
-
-[node name="wheel-2" parent="PropTest" instance=ExtResource("43_ck7pb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.545, -1, 18.4503)
-
-[node name="wheel-big" parent="PropTest" instance=ExtResource("44_fg02p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6254, -1, 18.3342)
-
-[node name="wheel-small" parent="PropTest" instance=ExtResource("45_xw147")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9081, -1, 18.3975)
 
 [node name="CityBuildingTest" type="Node" parent="."]
 
@@ -464,128 +585,3 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32, -1
 
 [node name="road_roundabout" parent="Roads" instance=ExtResource("89_tg2pw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -1, -52)
-
-[node name="Node" type="Node" parent="."]
-
-[node name="house_type01" parent="Node" instance=ExtResource("90_uyk2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, -5.78629)
-
-[node name="house_type02" parent="Node" instance=ExtResource("91_hwi6k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9762, -0.721691, -6.78629)
-
-[node name="house_type03" parent="Node" instance=ExtResource("92_lboy6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.9762, -0.721691, -6.78629)
-
-[node name="house_type04" parent="Node" instance=ExtResource("93_fnfdy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.9762, -0.721691, -5.78629)
-
-[node name="house_type05" parent="Node" instance=ExtResource("94_kavek")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.976, -0.721691, -6.78629)
-
-[node name="house_type06" parent="Node" instance=ExtResource("95_d6lds")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.976, -0.721691, -7.78629)
-
-[node name="house_type07" parent="Node" instance=ExtResource("96_scqnr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.976, -0.721691, -7.78629)
-
-[node name="house_type08" parent="Node" instance=ExtResource("97_diqam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.976, -0.721691, -6.78629)
-
-[node name="house_type09" parent="Node" instance=ExtResource("98_7bfkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.976, -0.721691, -6.78629)
-
-[node name="house_type10" parent="Node" instance=ExtResource("99_g1rui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, 10.2137)
-
-[node name="house_type11" parent="Node" instance=ExtResource("100_4wroh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9762, -0.721691, 10.2137)
-
-[node name="house_type12" parent="Node" instance=ExtResource("101_13su1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.9762, -0.721691, 9.21371)
-
-[node name="house_type13" parent="Node" instance=ExtResource("102_bqa37")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.9762, -0.721691, 9.21371)
-
-[node name="house_type14" parent="Node" instance=ExtResource("103_uy1br")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.976, -0.721691, 9.21371)
-
-[node name="house_type15" parent="Node" instance=ExtResource("104_nesyj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.976, -0.721691, 9.21371)
-
-[node name="house_type16" parent="Node" instance=ExtResource("105_055d2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.976, -0.721691, 10.2137)
-
-[node name="house_type17" parent="Node" instance=ExtResource("106_wo2cj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.976, -0.721691, 10.2137)
-
-[node name="house_type18" parent="Node" instance=ExtResource("107_2ex5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.976, -0.721691, 9.21371)
-
-[node name="house_type19" parent="Node" instance=ExtResource("108_42kb4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9762, -0.721691, 25.2137)
-
-[node name="house_type20" parent="Node" instance=ExtResource("109_a5xnb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9762, -0.721691, 25.2137)
-
-[node name="house_type21" parent="Node" instance=ExtResource("110_sh8tf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.9762, -0.721691, 24.2137)
-
-[node name="Ambulance" parent="." instance=ExtResource("16_unh0o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="Delivery" parent="." instance=ExtResource("14_brh3k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="DeliveryFlat" parent="." instance=ExtResource("15_3lj7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="Firetruck" parent="." instance=ExtResource("17_olyry")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="GarbageTruck" parent="." instance=ExtResource("18_ykiju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="Hatchback-sport" parent="." instance=ExtResource("19_3co5q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="Police" parent="." instance=ExtResource("20_e5b63")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="racecar" parent="." instance=ExtResource("21_l5m76")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="racecar-blue" parent="." instance=ExtResource("22_m6iyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="sedan" parent="." instance=ExtResource("23_0cofi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="Sedan-sport" parent="." instance=ExtResource("24_nwv8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="suv" parent="." instance=ExtResource("25_sx8hi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="suv-luxury" parent="." instance=ExtResource("26_h3578")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="taxi" parent="." instance=ExtResource("27_2dyfk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="tractor" parent="." instance=ExtResource("28_go2x5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="tractor-police" parent="." instance=ExtResource("29_lsggo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="tractor-shovel" parent="." instance=ExtResource("30_s8l0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="truck" parent="." instance=ExtResource("31_rjpxg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="truck-flat" parent="." instance=ExtResource("32_yqn3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)
-
-[node name="van" parent="." instance=ExtResource("33_i64ko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7521, -1, 21.9402)

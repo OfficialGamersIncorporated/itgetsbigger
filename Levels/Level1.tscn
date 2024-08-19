@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmetxgdk4h01u"]
+
+[ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_62pms"]
+[ext_resource type="Script" path="res://PropManager.gd" id="2_d3owb"]
+[ext_resource type="PackedScene" uid="uid://c8tbssc03ewr" path="res://Tiles/Roads/tile_low.tscn" id="3_mi00e"]
+[ext_resource type="PackedScene" uid="uid://duarwny2gy6pa" path="res://Tiles/Roads/tile_slant_high.tscn" id="4_58ys8"]
+[ext_resource type="PackedScene" uid="uid://cqeh0njbtyv4y" path="res://Tiles/Roads/tile_high.tscn" id="5_efmho"]
+[ext_resource type="PackedScene" uid="uid://cb30rmnllibhm" path="res://Tiles/Roads/road_straight.tscn" id="6_ik2gu"]
+[ext_resource type="PackedScene" uid="uid://ded4uxxsqi5p7" path="res://Tiles/Roads/road_end.tscn" id="7_utjfb"]
+[ext_resource type="PackedScene" uid="uid://dndjxlk7wkbrw" path="res://Tiles/Roads/road_slant_high.tscn" id="8_bwwyx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yyws7"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_na6cy"]
+sky_material = SubResource("ProceduralSkyMaterial_yyws7")
+
+[sub_resource type="Environment" id="Environment_a5vd8"]
+background_mode = 2
+sky = SubResource("Sky_na6cy")
+
+[node name="Level1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a5vd8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_62pms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" parent="Player" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+script = ExtResource("2_d3owb")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="tile_slantHigh" parent="Node" instance=ExtResource("4_58ys8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="tile_slantHigh3" parent="Node" instance=ExtResource("4_58ys8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 0, -1.39876e-06)
+
+[node name="tile_slantHigh4" parent="Node" instance=ExtResource("4_58ys8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.99382e-07, 0, 8)
+
+[node name="tile_high2" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+
+[node name="tile_high3" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 8)
+
+[node name="tile_low2" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 8)
+
+[node name="tile_high8" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+
+[node name="tile_high9" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 8)
+
+[node name="tile_low5" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 8)
+
+[node name="tile_high4" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="tile_high5" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -8)
+
+[node name="tile_low3" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -8)
+
+[node name="tile_high6" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="tile_high7" parent="Node" instance=ExtResource("5_efmho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, -8)
+
+[node name="tile_low4" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -8)
+
+[node name="tile_low6" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 8)
+
+[node name="tile_low9" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 16)
+
+[node name="tile_low7" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -8)
+
+[node name="tile_low8" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
+
+[node name="tile_low10" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, 8)
+
+[node name="tile_low11" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, 16)
+
+[node name="tile_low14" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 16)
+
+[node name="tile_low15" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 16)
+
+[node name="tile_low16" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 16)
+
+[node name="tile_low17" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -16)
+
+[node name="tile_low18" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -16)
+
+[node name="tile_low19" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -16)
+
+[node name="tile_low21" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -16)
+
+[node name="tile_low12" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -8)
+
+[node name="tile_low13" parent="Node" instance=ExtResource("3_mi00e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, 0)
+
+[node name="road_straight" parent="." instance=ExtResource("6_ik2gu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 4, -16)
+
+[node name="road_straight2" parent="." instance=ExtResource("6_ik2gu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.49691e-07, 4, -24)
+
+[node name="road_straight3" parent="." instance=ExtResource("6_ik2gu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.99382e-07, 4, -32)
+
+[node name="road_end" parent="." instance=ExtResource("7_utjfb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="road_slantHigh" parent="." instance=ExtResource("8_bwwyx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -8)
+
+[editable path="Player"]
