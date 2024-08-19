@@ -13,7 +13,7 @@ var displaceMapSize : Vector2i = Vector2i(256, 256)
 @export var imprintUpdateMoveDistance : float = .25
 
 @export var PolyResolutionPerUnit : float = 4 #16
-@export var DisplacementResolutionPerUnit : float = 16 #20
+@export var DisplacementResolutionPerUnit : float = 8 #16 #20
 
 
 var bodiesLastPositions = {}

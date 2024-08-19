@@ -16,8 +16,6 @@ func  ProjectOnPlane(point : Vector3, planeNormal : Vector3):
 func _physics_process(delta: float) -> void:
 	var sizeMultiplier = target.CalculateRadiusFromVolume(target.CurrentVolume)
 	
-	look_at(target.global_position)
-	
 	global_position.y = move_toward(global_position.y, target.global_position.y + DesiredElevation * sizeMultiplier, MoveSpeed * sizeMultiplier * delta)
 	global_position.y = max(global_position.y, target.global_position.y)
 	
@@ -27,3 +25,5 @@ func _physics_process(delta: float) -> void:
 	var desiredDistance = clampf(targetDistance, MinTargetDistance * sizeMultiplier, MaxTargetDistance * sizeMultiplier)
 	var deltaDistance = targetDistance - desiredDistance # can be negative
 	global_position = global_position.move_toward(planarTargetPos, deltaDistance)
+	
+	look_at(target.global_position)
