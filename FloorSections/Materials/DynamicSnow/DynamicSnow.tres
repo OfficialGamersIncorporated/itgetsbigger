@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=53 format=3 uid="uid://c3q1vrfdf2okl"]
+[gd_resource type="VisualShader" load_steps=51 format=3 uid="uid://c3q1vrfdf2okl"]
 
 [ext_resource type="Texture2D" uid="uid://bhc2skag24v1v" path="res://FloorSections/Materials/Generated/Glitter/Glitter_normal.png" id="1_83g4p"]
 
@@ -83,7 +83,7 @@ op_type = 4
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_a4npc"]
-constant = 1.0
+constant = 2.0
 
 [sub_resource type="VisualShaderNodeRandomRange" id="VisualShaderNodeRandomRange_fyfwu"]
 
@@ -134,13 +134,6 @@ operator = 3
 parameter_name = "Color"
 default_value_enabled = true
 
-[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_16xu5"]
-expanded_output_ports = [0]
-source = 5
-
-[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_w6tln"]
-parameter_name = "SnowDisplacementMap2"
-
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_bdslk"]
 parameter_name = "SnowDisplacementMap"
 
@@ -179,6 +172,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D SnowDisplacementMap;
+uniform vec4 Color : source_color = vec4(1.000000, 1.000000, 1.000000, 1.000000);
 uniform float Roughness : hint_range(0, 1);
 uniform float TriplanarScale = 1;
 uniform sampler2D NormalMap : hint_normal;
@@ -252,6 +246,10 @@ void vertex() {
 }
 
 void fragment() {
+// ColorParameter:7
+	vec4 n_out7p0 = Color;
+
+
 // FloatParameter:3
 	float n_out3p0 = Roughness;
 
@@ -348,7 +346,7 @@ void fragment() {
 
 
 // FloatConstant:43
-	float n_out43p0 = 1.000000;
+	float n_out43p0 = 2.000000;
 
 
 // VectorOp:42
@@ -379,6 +377,7 @@ void fragment() {
 
 
 // Output:0
+	ALBEDO = vec3(n_out7p0.xyz);
 	ROUGHNESS = n_out3p0;
 	EMISSION = n_out40p0;
 	NORMAL_MAP = vec3(n_out2p0.xyz);
@@ -386,7 +385,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-1413.45, 1270.89)
+graph_offset = Vector2(-630.378, -300)
 nodes/vertex/2/node = SubResource("VisualShaderNodeInput_wyu2x")
 nodes/vertex/2/position = Vector2(-480, 140)
 nodes/vertex/3/node = SubResource("VisualShaderNodeRandomRange_ec3lg")
@@ -418,10 +417,6 @@ nodes/fragment/4/node = SubResource("VisualShaderNodeTexture2DParameter_h0kay")
 nodes/fragment/4/position = Vector2(-580, 500)
 nodes/fragment/7/node = SubResource("VisualShaderNodeColorParameter_ds4te")
 nodes/fragment/7/position = Vector2(-520, 0)
-nodes/fragment/8/node = SubResource("VisualShaderNodeTexture_16xu5")
-nodes/fragment/8/position = Vector2(-78.4475, -131.996)
-nodes/fragment/9/node = SubResource("VisualShaderNodeTexture2DParameter_w6tln")
-nodes/fragment/9/position = Vector2(-480, -340)
 nodes/fragment/10/node = SubResource("VisualShaderNodeInput_0s0je")
 nodes/fragment/10/position = Vector2(-1880, 260)
 nodes/fragment/11/node = SubResource("VisualShaderNodeVectorCompose_4gn1b")
@@ -490,4 +485,4 @@ nodes/fragment/57/node = SubResource("VisualShaderNodeVectorOp_p2ppy")
 nodes/fragment/57/position = Vector2(-800, 1320)
 nodes/fragment/60/node = SubResource("VisualShaderNodeVectorOp_myi88")
 nodes/fragment/60/position = Vector2(-1400, 1240)
-nodes/fragment/connections = PackedInt32Array(3, 0, 0, 3, 4, 0, 2, 2, 9, 0, 8, 2, 11, 0, 13, 0, 12, 0, 13, 1, 13, 0, 2, 0, 16, 1, 11, 0, 16, 3, 11, 1, 14, 0, 16, 1, 15, 0, 17, 0, 17, 0, 16, 0, 2, 0, 0, 9, 16, 1, 28, 0, 16, 3, 28, 1, 28, 0, 31, 0, 21, 0, 31, 1, 31, 1, 33, 0, 31, 2, 34, 0, 33, 0, 35, 0, 34, 0, 35, 1, 35, 0, 30, 0, 37, 0, 39, 0, 39, 0, 40, 0, 43, 0, 42, 1, 40, 0, 0, 5, 42, 0, 40, 1, 49, 0, 48, 0, 48, 0, 42, 0, 45, 0, 50, 0, 46, 0, 50, 1, 50, 0, 51, 0, 52, 0, 45, 2, 52, 0, 46, 2, 52, 0, 51, 1, 51, 2, 49, 1, 51, 1, 49, 0, 16, 1, 53, 0, 16, 3, 53, 1, 56, 0, 55, 1, 55, 0, 54, 0, 54, 0, 57, 0, 56, 0, 57, 1, 57, 0, 37, 0, 16, 0, 60, 0, 60, 0, 55, 0, 57, 3, 46, 0, 57, 1, 45, 0)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 3, 4, 0, 2, 2, 11, 0, 13, 0, 12, 0, 13, 1, 13, 0, 2, 0, 16, 1, 11, 0, 16, 3, 11, 1, 14, 0, 16, 1, 15, 0, 17, 0, 17, 0, 16, 0, 2, 0, 0, 9, 16, 1, 28, 0, 16, 3, 28, 1, 28, 0, 31, 0, 21, 0, 31, 1, 31, 1, 33, 0, 31, 2, 34, 0, 33, 0, 35, 0, 34, 0, 35, 1, 35, 0, 30, 0, 37, 0, 39, 0, 39, 0, 40, 0, 43, 0, 42, 1, 40, 0, 0, 5, 42, 0, 40, 1, 49, 0, 48, 0, 48, 0, 42, 0, 45, 0, 50, 0, 46, 0, 50, 1, 50, 0, 51, 0, 52, 0, 45, 2, 52, 0, 46, 2, 52, 0, 51, 1, 51, 2, 49, 1, 51, 1, 49, 0, 16, 1, 53, 0, 16, 3, 53, 1, 56, 0, 55, 1, 55, 0, 54, 0, 54, 0, 57, 0, 56, 0, 57, 1, 57, 0, 37, 0, 16, 0, 60, 0, 60, 0, 55, 0, 57, 3, 46, 0, 57, 1, 45, 0, 7, 0, 0, 0)
