@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cid5vgpdhvp6a"]
 
-[ext_resource type="Material" path="res://FloorSections/Materials/TileGrassySnow.tres" id="1_o7y4i"]
+[ext_resource type="Material" uid="uid://851k66khas57" path="res://FloorSections/Materials/TileGrassySnow.tres" id="1_o7y4i"]
 [ext_resource type="PackedScene" uid="uid://iusacg77ue4m" path="res://FloorSections/Materials/DynamicSnow/snow_displacement.tscn" id="3_m2fs7"]
 
-[node name="FloorSection_Walled" type="Node3D"]
+[node name="FloorSection" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)

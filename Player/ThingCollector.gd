@@ -33,7 +33,7 @@ func ConsumeProp(other : Prop):
 	other.SetPassive(true)
 	
 	var toPropVector : Vector3 = other.global_position - global_position
-	toPropVector = toPropVector.clampf(0, CalculateRadiusFromVolume(CurrentVolume))
+	toPropVector = toPropVector.normalized() * (CalculateRadiusFromVolume(CurrentVolume))
 	other.global_position = global_position + toPropVector
 
 func RemoveRandomProp():

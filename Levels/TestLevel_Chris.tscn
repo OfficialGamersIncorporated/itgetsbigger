@@ -21,13 +21,13 @@ ground_bottom_color = Color(0, 0.194333, 0.53, 1)
 ground_horizon_color = Color(0.356863, 0.47451, 0.670588, 1)
 sun_angle_max = 130.0
 
-[sub_resource type="Sky" id="Sky_n4uqb"]
+[sub_resource type="Sky" id="Sky_lmlyy"]
 sky_material = SubResource("ProceduralSkyMaterial_j07cq")
 
 [sub_resource type="Environment" id="Environment_udpdw"]
 background_mode = 2
 background_energy_multiplier = 2.37
-sky = SubResource("Sky_n4uqb")
+sky = SubResource("Sky_lmlyy")
 tonemap_mode = 1
 tonemap_exposure = 0.54
 tonemap_white = 16.0

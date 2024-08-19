@@ -308,10 +308,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -16)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -16)
 
 [node name="tile_low19" parent="Node" instance=ExtResource("3_mi00e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -16)
+transform = Transform3D(1.02539, 0, 0, 0, 1.02539, 0, 0, 0, 1.02539, 8, 4, -16)
 
 [node name="tile_low21" parent="Node" instance=ExtResource("3_mi00e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -16)
+transform = Transform3D(1.00603, 0, 0, 0, 1.00603, 0, 0, 0, 1.00603, -8, 4, -16)
 
 [node name="tile_low12" parent="Node" instance=ExtResource("3_mi00e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -8)

@@ -1,7 +1,10 @@
 extends RigidBody3D
 class_name Prop
 
-@onready var Volume = GetTrueVolume()
+@export var Volume = -1
+
+func _ready() -> void:
+	if Volume < 0: Volume = GetTrueVolume()
 
 func GetTrueVolume():
 	return PropManager.GetVolumeOfObject(self)

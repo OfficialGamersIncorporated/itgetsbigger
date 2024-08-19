@@ -8,7 +8,7 @@ extends Camera3D
 @export var MoveSpeed : float = 4
 
 func _ready() -> void:
-	pass
+	top_level = true
 
 func  ProjectOnPlane(point : Vector3, planeNormal : Vector3):
 	return point - point.project(planeNormal)
