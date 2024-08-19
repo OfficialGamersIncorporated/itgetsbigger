@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://d3n0upp2qaic3"]
+[gd_scene load_steps=7 format=4 uid="uid://d3n0upp2qaic3"]
+
+[ext_resource type="Script" path="res://Props/Prop.gd" id="1_cdtjs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydm4t"]
 resource_name = "cone"
@@ -64,10 +66,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sxqhy")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_leyls"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ml70l"]
 points = PackedVector3Array(-0.0375, 0, -0.0375, -0.0375, 0, 0.0375, -0.0375, 0.0187482, -0.0375, 0.0375, 0, -0.0375, 0.0375, 0, 0.0375, -0.0375, 0.0187482, 0.0375, 0.0375, 0.0187482, -0.0375, -0.0103588, 0.09375, -7.34255e-06, -0.0100064, 0.09375, -0.00268696, -0.00897122, 0.09375, -0.00518305, -0.00732674, 0.09375, -0.00732674, -0.00518305, 0.09375, -0.00897122, -0.00268696, 0.09375, -0.0100064, -7.34255e-06, 0.09375, -0.0103588, 0.0375, 0.0187482, 0.0375, -7.34255e-06, 0.09375, 0.0103514, -0.00268696, 0.09375, 0.00999902, -0.00518305, 0.09375, 0.00896388, -0.00732674, 0.09375, 0.0073194, -0.00897122, 0.09375, 0.0051757, -0.0100064, 0.09375, 0.00267962, 0.00267962, 0.09375, -0.0100064, 0.0051757, 0.09375, -0.00897122, 0.0073194, 0.09375, -0.00732674, 0.00896388, 0.09375, -0.00518305, 0.00999902, 0.09375, -0.00268696, 0.0103514, 0.09375, -7.34255e-06, 0.00999902, 0.09375, 0.00267962, 0.00896388, 0.09375, 0.0051757, 0.0073194, 0.09375, 0.0073194, 0.0051757, 0.09375, 0.00896388, 0.00267962, 0.09375, 0.00999902)
 
-[node name="construction_pylon" type="StaticBody3D"]
+[node name="construction_pylon" type="RigidBody3D"]
+script = ExtResource("1_cdtjs")
 
 [node name="construction_pylon" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
@@ -76,4 +79,4 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_leyls")
+shape = SubResource("ConvexPolygonShape3D_ml70l")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://bm68ltdxrrxri"]
+
+[ext_resource type="Script" path="res://Props/Prop.gd" id="1_dymg3"]
+[ext_resource type="Texture2D" uid="uid://2ih6567g5w08" path="res://Props/RawFiles/SurvivalKit/Textures/colormap.png" id="2_ie7d0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0ffv"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("2_ie7d0")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2lesu"]
+_surfaces = [{
+"aabb": AABB(-0.59175, 0, -0.3799, 1.1835, 0.828, 0.7598),
+"format": 34896613377,
+"index_count": 300,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABAADAAEAAQAFAAQACAAGAAcABwAJAAgACwAKAAkACQAHAAsADgAMAA0ADQAPAA4AEgAQABEAEQATABIACAAJAAoACgAUAAgADQAIABQADQAVAAgADwANABQABQAPABQAAAAPAAUABQABAAAABQAUABEAEQAQAAUABgAWAAwADAAOAAYACwAGAA4ACwAHAAYAFwALAA4ABAAXAA4AEwAXAAQABAASABMABAAOAAIAAgADAAQACAAVABYAFgAGAAgAEgAEAAUABQAQABIACwAXABQAFAAKAAsAFAAXABMAEwARABQADwAAAAIAAgAOAA8AFQANAAwADAAWABUAGgAYABkAGQAbABoAHgAcAB0AHQAfAB4AIgAgACEAIQAjACIAJAAbABkAGQAlACQAHgAkACUAHgAmACQAHAAeACUAIAAcACUAJwAcACAAIAAiACcAIAAlACgAKAApACAAKwAqACgAKAAlACsAIgAjACwALAAnACIAJQAZABgAGAArACUAKAAqAC0ALQApACgAHgAfAC4ALgAmAB4AHQAcACcAJwAsAB0ALwAkACYAJgAuAC8AIAApAC0ALQAhACAALwAaABsAGwAkAC8ALAAjACEAIQAdACwAKwAdACEAKwAfAB0AKgArACEAIQAtACoAKwAvAB8ALwAuAB8ALwArABgAGAAaAC8AMgAwADEAMQAzADIANgA0ADUANQA3ADYANgAzADEAMQA0ADYANQA0ADEAMQAwADUANQAwADIAMgA3ADUAMgAzADYANgA3ADIA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("cu8AAN8iAABy7wAAAAAAAA/ZAADfIgAAD9kAAAAAAAAP2a26j24AAHLvrbqPbgAAD9mtum+RAAAP2ZLyibIAAHLvrbpvkQAAcu+S8omyAABy7///nZcAAA/Z//+dlwAAD9kAAB/dAABy7wAAH90AAA/ZPZ3/fwAAcu89nf9/AABy75LydU0AAHLv//9haAAAD9mS8nVNAAAP2f//YWgAAHLvHtj/fwAAcu8AAP//AAAP2QAA//8AAA/ZHtj/fwAAxiwAAB/dAABjFgAAH90AAMYsAAD//wAAYxYAAP//AABjFh7Y/38AAMYsHtj/fwAAYxb//52XAADGLP//nZcAAGMWrbqPbgAAxiytuo9uAABjFpLydU0AAMYskvJ1TQAAYxatum+RAABjFj2d/38AAGMWkvKJsgAAYxb//2FoAABjFgAA3yIAAGMWAAAAAAAAxiwAAN8iAADGLD2d/38AAMYs//9haAAAxiwAAAAAAADGLJLyibIAAMYsrbpvkQAA///apiiPAAD//9qm1nAAAAAA2qYojwAAAADaptZwAAD//63C1nAAAP//rcIojwAAAACtwtZwAAAAAK3CKI8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b04w8"]
+resource_name = "campfire-fishing-stand_campfire-fishing-stand"
+_surfaces = [{
+"aabb": AABB(-0.59175, 0, -0.3799, 1.1835, 0.828, 0.7598),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l5j5/5eY+f+XmPn/l5j5/5dC1P+XQtT/l0LU/5cVyf+XQtT/lxXJ/5dlxv+XFcn/l2XG/5cVyf+XmPn/l5j5/5cm2v+XJtr/lxXJ/5dlxv+XFcn/l2XG/5cVyf+XZcb/l0LU/5dfzv+XmPn/l5j5/5cm2v+XQtT/l5j5/5eY+f+XZcb/lxXJ/5eY+f+XmPn/l0LU/5cm2v+XZcb/lxXJ/5dfzv+XQtT/l2XG/5cVyf+XmPn/l5j5/5eY+f+XmPn/l0LU/5dC1P+XQtT/l0LU/5cVyf+XFcn/l1/O/5dfzv+XZcb/l2XG/5dfzv+XZcb/l1/O/5dlxv+XmPn/l5j5/5cm2v+XJtr/l5j5/5eY+f+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+XX87/l1/O/5dlxv+XZcb/l0LU/5dC1P+XFcn/lxXJ/5eY+f+XmPn/l0LU/5cm2v+XZcb/lxXJ/5dfzv+XQtT/l2XG/5cVyf+XmPn/l5j5/5eY+f+XmPn/lyba/5cm2v+XFcn/l2XG/5cVyf+XZcb/l5j5/5eY+f+XJtr/lyba/5eY+f+XmPn/l5j5/5eY+f+XZcb/lxXJ/5dlxv+XFcn/l1/O/5dlxv+XX87/l2XG/5dC1P+XFcn/l0LU/5cVyf+XmPn/l5j5/5dC1P+XQtT/l5j5/5eY+f+XQtT/l0LU/5cVyf+XQtT/l2XG/5dfzv+XJtr/l2XG/5eY+f+XmPn/l0LU/5cVyf+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+X/9//l//f/5f/3/+X/9//l5j5/5eY+f+X/9//l//f/5f/3/+XmPn/l//f/5eY+f+XmPn/l5j5/5f/3/+X/9//l5j5/5f/3/+XmPn/l//f"),
+"format": 34896613399,
+"index_count": 300,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAFgAUABUAFQAXABYAGgAYABkAGQAbABoAHAAaABsAHAAdABoAHgAcABsAHwAeABsAIAAeAB8AHwAhACAAHwAbACIAIgAjAB8AJgAkACUAJQAnACYAKAAmACcAKAApACYAKgAoACcAKwAqACcALAAqACsAKwAtACwAKwAnAC4ALgAvACsAMgAwADEAMQAzADIANgA0ADUANQA3ADYAOgA4ADkAOQA7ADoAPgA8AD0APQA/AD4AQgBAAEEAQQBDAEIARgBEAEUARQBHAEYASgBIAEkASQBLAEoATgBMAE0ATQBPAE4AUgBQAFEAUQBTAFIAVgBUAFUAVQBXAFYAWABWAFcAWABZAFYAWgBYAFcAWwBaAFcAXABaAFsAWwBdAFwAWwBXAF4AXgBfAFsAYgBgAGEAYQBjAGIAZgBkAGUAZQBnAGYAagBoAGkAaQBrAGoAbgBsAG0AbQBvAG4AcgBwAHEAcQBzAHIAdgB0AHUAdQB3AHYAegB4AHkAeQB7AHoAfgB8AH0AfQB/AH4AggCAAIEAgQCDAIIAhgCEAIUAhQCHAIYAiACHAIUAiACJAIcAigCIAIUAhQCLAIoAiACMAIkAjACNAIkAjACIAI4AjgCPAIwAkgCQAJEAkQCTAJIAlgCUAJUAlQCXAJYAmgCYAJkAmQCbAJoAngCcAJ0AnQCfAJ4AogCgAKEAoQCjAKIApgCkAKUApQCnAKYA"),
+"material": SubResource("StandardMaterial3D_w0ffv"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 168,
+"vertex_data": PackedByteArray("cu8AAN8i/79y7wAAAAD/vw/ZAADfIv+/D9kAAAAA/78P2QAAAAD//3LvAAAAAP//D9mtuo9u//9y7626j27//w/ZrbpvkUeUD9mS8omyR5Ry7626b5FHlHLvkvKJskeUcu///52Xtsty75LyibK2qw/Z//+dl7bLD9mS8omytqsP2QAAH93//3LvAAAf3f//D9k9nf9///9y7z2d/3///3LvkvJ1Tf//cu///2Fo//8P2ZLydU3//w/Z//9haP//cu+S8omy/79y7///nZf/v3Lvrbpvkf+/cu8e2P9//79y7wAAH93/v3LvAAD///+/cu89nf9//79y7626j27/v3LvAADfIv+/cu8AAAAA/79y7///YWj/v3LvkvJ1Tf+/D9kAAP///78P2QAAH93/vw/Zrbpvkf+/D9k9nf9//78P2f//nZf/vw/ZkvKJsv+/D9ke2P9//78P2a26j27/vw/Z//9haP+/D9mS8nVN/78P2QAA3yL/vw/ZAAAAAP+/cu8AAP//R5QP2QAA//9HlHLvrbpvkUeUD9mtum+RR5QP2a26j27//3LvrbqPbv//D9mS8nVN//9y75LydU3//w/ZHtj/f///cu8e2P9///8P2f//nZf//3Lv//+dl///D9ke2P9/R5QP2f//YWhHtHLvHtj/f0eUcu///2FoR7Ry7wAA3yJHlA/ZAADfIkeUcu89nf9/R5QP2T2d/39HlHLvAAAf3f+/D9kAAB/d/79y7wAA////vw/ZAAD///+/xiwAAB/d/79jFgAAH93/v8YsAAD///+/YxYAAP///79jFh7Y/3///8YsHtj/f///Yxb//52X///GLP//nZf//2MWrbqPbv//xiytuo9u//9jFpLydU3//8YskvJ1Tf//YxYAAP///79jFgAAH93/v2MWrbpvkf+/YxY9nf9//79jFv//nZf/v2MWkvKJsv+/YxYe2P9//79jFq26j27/v2MW//9haP+/YxaS8nVN/79jFgAA3yL/v2MWAAAAAP+/xiwAAN8iR5RjFgAA3yJHlMYsPZ3/f0eUYxY9nf9/R5TGLJLydU3//8Ys//9haP//YxaS8nVN//9jFv//YWj//2MWAAAf3f//xiwAAB/d//9jFj2d/3///8YsPZ3/f///xiwAAN8i/7/GLAAAAAD/v2MWAADfIv+/YxYAAAAA/7/GLP//nZe2y8YskvKJsrarYxb//52XtstjFpLyibK2q2MWHtj/f0eUYxb//2FoR7TGLB7Y/39HlMYs//9haEe0Yxatum+RR5RjFpLyibJHlMYsrbpvkUeUxiyS8omyR5RjFgAAAAD//8YsAAAAAP//Yxatuo9u///GLK26j27//8YsAAD//0eUYxYAAP//R5TGLK26b5FHlGMWrbpvkUeUxiyS8nVN/7/GLK26j27/v8Ys//9haP+/xiwe2P9//7/GLD2d/3//v8Ys//+dl/+/xiwAAN8i/7/GLAAAAAD/v8Ysrbpvkf+/xiyS8omy/7/GLAAAH93/v8YsAAD///+////apiiP/5///9qm1nD/3wAA2qYoj/+fAADaptZw/9///63C1nD/////rcIoj///AACtwtZw//8AAK3CKI///wAA2qbWcP/////aptZw//8AAK3C1nD/////rcLWcP////+twtZw/7///9qm1nD/v///rcIoj/+////apiiP/7///9qmKI//nwAA2qYoj/+f//+twiiP/58AAK3CKI//nwAA2qbWcP+/AACtwtZw/78AANqmKI//vwAArcIoj/+/AAD/fwAA/38AAP9/AAD/f/9/Dub/fw7m/38O5v9/DuYAAP9/AAD/fwAA/38AAP9/////f////3////9/////f/CZ///wmf//8Jn///CZ////f0PQ/3+7tv9/Q9D/f7u2/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f////3////9/////f///////f////3////9/////f/CZ///wmf//8Jn///CZ////fw7m/38O5v9/Q8n/f0PJ////f////3////9/////fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/9/Dub/fw7m/39Dyf9/Q8nwmf//8Jn///CZ///wmf///3////9/////f////3////9/////f////3////9/////f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9/Q9D/f7u2/39D0P9/u7bwmf//8Jn///CZ///wmf//AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/f/9/Dub/fw7m/38O5v9/Dub///9/////f////3////9//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/gdr/f3yl/3+B2v9/fKV8pf//fKX///9/gdr/f4Ha/38AAP9/AAD/fwAA/38AAAAA/38AAP9/////f////3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2lesu")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4swyi"]
+points = PackedVector3Array(0.515175, 0.828, 0.0700599, 0.515175, 0.784558, 0.149937, 0.59175, 0.629591, 0.0449216, 0.515175, 0.828, -0.0701343, -0.488298, 0.828, 0.0700599, 0.515175, 0, 0.3799, -0.488298, 0.784558, 0.149937, 0.59175, 0.629591, -0.0450704, 0.59175, 0.539626, 0.0449216, 0.515175, 0.784558, -0.150011, -0.488298, 0.828, -0.0701343, -0.59175, 0.629591, 0.0449216, 0.515175, 0, -0.3799, -0.488298, 0, 0.3799, 0.59175, 0.539626, -0.0450704, -0.488298, 0.784558, -0.150011, -0.59175, 0.629591, -0.0450704, -0.59175, 0.539626, 0.0449216, -0.488298, 0, -0.3799, -0.59175, 0.539626, -0.0450704)
+
+[node name="campfire-fishing-stand" type="RigidBody3D"]
+script = ExtResource("1_dymg3")
+
+[node name="campfire-fishing-stand" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_b04w8")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_4swyi")

@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://guls3wckn7dj"]
+[gd_scene load_steps=8 format=4 uid="uid://guls3wckn7dj"]
+
+[ext_resource type="Script" path="res://Props/Prop.gd" id="1_8m44t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drdei"]
 resource_name = "pavement"
@@ -64,13 +66,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w10al")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t7vcv"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pwt8q"]
 points = PackedVector3Array(0.027381, 0.604762, 0.220833, -0.0297619, 0.604762, 0.220833, -0.0297619, 0.604762, -0.217262, 0.027381, 0.56667, -0.217262, 0.027381, 0.56667, 0.220833, 0.027381, 0.604762, -0.217262, -0.0297619, 0.56667, 0.220833, -0.0297619, 0.56667, -0.217262, 0.0125, 0.563838, -0.0119007)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k88ub"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x0alu"]
 points = PackedVector3Array(0.0178553, 0.557143, 0.0208315, -0.0297619, -0.00465196, -0.0267857, -0.0297619, -0.00465196, 0.0303571, 0.027381, -0.00465196, 0.0303571, 0.027381, 0.138175, -0.0267857, -0.0202362, 0.557143, -0.01726, -0.0202362, 0.557143, 0.0208315, 0.0178553, 0.557143, -0.01726, 0.025, 0.0187562, -0.0244048, -0.0297619, 0.119091, 0.0303571, -0.0297619, 0.128661, -0.0267857, 0.027381, 0.119091, 0.0303571, 0.027381, 0.138175, 0.0208315, -0.0297619, 0.128661, 0.0208315, -0.0202362, 0.138175, -0.0267857)
 
-[node name="light_squareDouble" type="StaticBody3D"]
+[node name="light_squareDouble" type="RigidBody3D"]
+script = ExtResource("1_8m44t")
 
 [node name="light_squareDouble" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
@@ -79,8 +82,8 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_t7vcv")
+shape = SubResource("ConvexPolygonShape3D_pwt8q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_k88ub")
+shape = SubResource("ConvexPolygonShape3D_x0alu")
