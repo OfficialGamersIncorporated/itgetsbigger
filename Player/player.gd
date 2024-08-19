@@ -1,4 +1,5 @@
 extends ThingCollector
+class_name Player
 
 @onready var Camera : Camera3D = $Camera3D
 

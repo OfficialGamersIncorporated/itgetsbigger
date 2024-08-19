@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dmetxgdk4h01u"]
+[gd_scene load_steps=40 format=3 uid="uid://dmetxgdk4h01u"]
 
 [ext_resource type="PackedScene" uid="uid://p34hurlymysb" path="res://Player/player.tscn" id="1_62pms"]
 [ext_resource type="Script" path="res://PropManager.gd" id="2_d3owb"]
@@ -34,23 +34,34 @@
 [ext_resource type="PackedScene" uid="uid://cf6va65x4p620" path="res://Props/Trees/tree_tall.tscn" id="30_ot0ja"]
 [ext_resource type="PackedScene" uid="uid://bxpyd2mt12qon" path="res://Props/Trees/tree_trunk.tscn" id="31_fl5o4"]
 [ext_resource type="PackedScene" uid="uid://b0o0mbsq8e81l" path="res://Tiles/pushBridge.tscn" id="32_ufxwp"]
+[ext_resource type="PackedScene" uid="uid://y2i1u7rgnjpu" path="res://Player/checkpoint.tscn" id="36_qjhpm"]
 [ext_resource type="PackedScene" uid="uid://eji8riuwoxh7" path="res://Tiles/Roads/road_slant_flat.tscn" id="66_5oo4b"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yyws7"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_voa4h"]
+sky_top_color = Color(0, 0.229167, 0.55, 1)
+sky_horizon_color = Color(0.356863, 0.47451, 0.670588, 1)
+ground_bottom_color = Color(0, 0.194333, 0.53, 1)
+ground_horizon_color = Color(0.356863, 0.47451, 0.670588, 1)
+sun_angle_max = 130.0
 
 [sub_resource type="Sky" id="Sky_na6cy"]
-sky_material = SubResource("ProceduralSkyMaterial_yyws7")
+sky_material = SubResource("ProceduralSkyMaterial_voa4h")
 
-[sub_resource type="Environment" id="Environment_a5vd8"]
+[sub_resource type="Environment" id="Environment_wkuwp"]
 background_mode = 2
+background_energy_multiplier = 2.37
 sky = SubResource("Sky_na6cy")
+tonemap_mode = 1
+tonemap_exposure = 0.54
+tonemap_white = 16.0
+glow_enabled = true
+fog_light_color = Color(0.23, 0.512333, 1, 1)
+fog_density = 0.0314
 
 [node name="Level1" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_a5vd8")
+environment = SubResource("Environment_wkuwp")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -451,5 +462,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2894, 4, -76.3633)
 
 [node name="PushBridge" parent="." instance=ExtResource("32_ufxwp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -24)
+
+[node name="Checkpoint" parent="." instance=ExtResource("36_qjhpm")]
+transform = Transform3D(40.9472, 0, 0, 0, 7.50048, 0, 0, 0, 10.9064, -16, 7.97025, -80.7357)
 
 [editable path="Player"]
