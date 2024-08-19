@@ -13,7 +13,7 @@ continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 3
 linear_damp = 0.1
-angular_damp = 2.0
+angular_damp = 0.1
 script = ExtResource("1_w0uy0")
 Acceleration = 20.0
 
