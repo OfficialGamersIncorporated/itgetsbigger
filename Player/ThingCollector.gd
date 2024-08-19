@@ -77,5 +77,5 @@ func _physics_process(_delta: float) -> void:
 			Damage(20, damageVect)
 			return
 		
-		if not body.is_class("RigidBody3D"): continue
+		if not body is Prop: continue
 		ConsumeProp(body)
