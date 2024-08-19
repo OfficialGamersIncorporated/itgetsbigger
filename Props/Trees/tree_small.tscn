@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=4 uid="uid://umqj0rkch8sw"]
+
+[ext_resource type="Script" path="res://Props/Prop.gd" id="1_sr88o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0500"]
+resource_name = "roof"
+albedo_color = Color(0.615762, 0.874166, 0.797738, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ey4pa"]
+resource_name = "wood"
+albedo_color = Color(0.944534, 0.800056, 0.699347, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qjaqj"]
+_surfaces = [{
+"aabb": AABB(-0.779423, 0.93408, -0.9, 1.55885, 3.26592, 1.8),
+"format": 34896613377,
+"index_count": 114,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAwABAAQABAAFAAMACAAGAAcABwAJAAgAAgAJAAcABwAAAAIADAAKAAsACwANAAwADQAOAAwADQAPAA4AAQAAAAcABwAQAAEAEAARAAEAEQAEAAEAEQASAAQAEwAQAAcABwAGABMABgASABMABgAUABIAFAAEABIAFQAUAAYABgAIABUAFAAVAAUABQAEABQACwACAAMAAwANAAsADQADAAUABQAPAA0ADgAVAAgACAAMAA4ADAAIAAkACQAKAAwACgAJAAIAAgALAAoABQAVAA4ADgAPAAUA"),
+"name": "roof",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("qioAAFVVAAD/fwAAqioAAAAAdzr/PwAA/393OgAAAABU1QAAVVUAAP//dzr/PwAA/38AAFTVAACqKgAAqqoAAP9/dzr//wAAAAB3Ov+/AABVVf//VJUAAFVV//+qagAA/3///6qqAAD/f///VVUAAKmq//9UlQAAqar//6pqAABOawAAFG4AALCUAAAUbgAAsJQAAOqRAABOawAA6pEAAFTVAACqqgAA//93Ov+/AAA=")
+}, {
+"aabb": AABB(-0.1935, 0, -0.1935, 0.387, 0.93408, 0.387),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYAAQAEAAYABgADAAEAAQAAAAUABQAEAAEABwAFAAAAAAACAAcA"),
+"name": "wood",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAAAAAAAKYs//+mLAAAWNP//6YsAAD//wAA//8AAAAAAAD//wAAWNP//1jTAACmLP//WNMAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vlr8t"]
+resource_name = "tree_small_Mesh tree_small"
+_surfaces = [{
+"aabb": AABB(-0.779423, 0.93408, -0.9, 1.55885, 3.26592, 1.8),
+"attribute_data": PackedByteArray("5cmBYhk2gWLY7qNIJhGjSOXJgWIZNoFi2O6jSCYRo0jlyYFiGTaBYtjuo0gmEaNI2O6jSOXJgWImEaNIGTaBYv8/5on/PxOA/3/Qjv9/Knv/v+aJ/78TgP//Knv//9CO/39XcQmf3ID1YNyAAAAqe/VgHYkJnx2J/3+jmAAA0I7lyYFiGTaBYtjuo0gmEaNIJhGjSNjuo0gZNoFi5cmBYtjuQlQmEUJU8qQAAAxbAADY7kJUJhFCVPKkAAAMWwAA2O5CVCYRQlTypAAADFsAANjuQlQmEUJU8qQAAAxbAADY7kJUJhFCVPKkAAAMWwAAJhFCVAxbAADY7kJU8qQAAA=="),
+"format": 34896613399,
+"index_count": 114,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIAEwAUABIAEwAVABQAGAAWABcAFwAZABgAGQAaABgAGgAbABgAGgAcABsAHQAZABcAFwAeAB0AHgAcAB0AHgAfABwAHwAbABwAIgAgACEAIQAjACIAJgAkACUAJQAnACYAKgAoACkAKQArACoALgAsAC0ALQAvAC4AMgAwADEAMQAzADIANgA0ADUANQA3ADYAOgA4ADkAOQA7ADoAPgA8AD0APQA/AD4A"),
+"material": SubResource("StandardMaterial3D_v0500"),
+"name": "roof",
+"primitive": 3,
+"uv_scale": Vector4(6.8191, 51.2939, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("qioAAFVVD9j/fwAAqipb/gAAdzr/P2vV/393OgAA8f//fwAAqipb/lTVAABVVQ/Y/393OgAA8f///3c6/z9r1f9/AABU1cqRqioAAKqqWKz/f3c6//8ygwAAdzr/v7eqAAB3Ov+/06qqKgAAqqpqrwAAdzr/P0/VqioAAFVVztRVVf//VJX/v1VV//+qav+//3///6qq/7//f///VVX/v6mq//9Ulf+/qar//6pq/7+qKgAAVVX//6oqAACqqv///38AAKoq//9OawAAFG7//7CUAAAUbv//VNUAAFVV//+wlAAA6pH//05rAADqkf///38AAFTV//9U1QAAqqr//1TVAACqqlis/38AAFTVypH//3c6/7+3qv9/dzr//zKD//93Ov+/06r//3c6/z9P1VTVAACqqmqvVNUAAFVVztQAAHc6/z9r1f9/dzoAAPH/VVX//6pqYdb/f///VVVd//9/dzoAAPH///93Ov8/a9X/f///VVVd/6mq//+qamHW//93Ov+/t6r/f3c6//8yg6mq//9UlU2r/3///6qq8or/f3c6//8ygwAAdzr/v7eq/3///6qq8opVVf//VJVNqwAAdzr/v9OqAAB3Ov8/T9VVVf//VJWHrFVV//+qah/V//93Ov+/06qpqv//VJWHrP//dzr/P0/Vqar//6pqH9XPZXf/dGKC9XF6/v97eZz9g3WKHXh/MBqdfYQG/n+OBToIvLI4VwrYkgHMr6h2qfaac3T7tlAr7oZ4Qvt+Xh/r////f////3////9/////f////3////9//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//PwpYxyi8MsV3qnZWCc0vbH50e2UMQ3t4BytuSS8ga4AhcXr+/3t5nP0hgLDuMYcb7J19hAb+f44F45MyB06RIgCqdlYJzS9sfqqbcxvH+ltOkgHMr6h2qfZazjaFc5tU5JpzdPuGeEL7qIzM3TmOaOl0e2UMMaKoDEN7eAeWljkO")
+}, {
+"aabb": AABB(-0.1935, 0, -0.1935, 0.387, 0.93408, 0.387),
+"attribute_data": PackedByteArray("//+kmwAApJtY0wAApiwAAP//pJsAAKSbWNMAAKYsAAAAAKSbpiwAAP//pJtY0wAA//8qef//fLkAACp5AAB8uf//pJsAAKSbWNMAAKYsAAA="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4AEgAQABEAEQATABIA"),
+"material": SubResource("StandardMaterial3D_ey4pa"),
+"name": "wood",
+"primitive": 3,
+"uv_scale": Vector4(2.53937, 10.1072, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAAAA/////wAAAAD//6Ys//+mLP//WNP//6Ys/////wAA///vggAAAAD//++CWNP//1jT74KmLP//WNPvgv//AAD//wzAWNP//1jTDMD//wAAAAAMwFjT//+mLAzAAAAAAAAA//8AAAAA////////AAAAAP////8AAP////8AAAAA//8MwAAAAAAAAAzApiz//1jTDMCmLP//piwMwP9/ifv/f4n7/3+J+/9/ifv///9/////f////3////9/nYhOBJ2ITgSdiE4EnYhOBP9//z//f/8//3//P/9//z9OhGH3ToRh906EYfdOhGH3")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qjaqj")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_imvsx"]
+points = PackedVector3Array(-0.000152588, 1.67984, 0.9, 0.259706, 4.2, 0.149941, -0.000152588, 4.2, 0.299883, -0.259858, 4.2, 0.149941, -0.779423, 1.67984, 0.449824, -0.193635, 0, 0.193461, -0.000152588, 0.934064, 0.599941, 0.193482, 0, 0.193461, 0.779423, 1.67984, 0.449824, 0.259706, 4.2, -0.150117, -0.259858, 4.2, -0.150117, -0.779423, 1.67984, -0.450176, -0.519717, 0.934064, 0.299883, -0.193635, 0, -0.193637, 0.193482, 0, -0.193637, 0.519564, 0.934064, 0.299883, 0.779423, 1.67984, -0.450176, -0.000152588, 4.2, -0.300059, -0.000152588, 1.67984, -0.9, -0.519717, 0.934064, -0.300059, -0.000152588, 0.934064, -0.600117, 0.519564, 0.934064, -0.300059)
+
+[node name="tree_small" type="RigidBody3D"]
+script = ExtResource("1_sr88o")
+
+[node name="tree_small" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, 0, 0, 0)
+mesh = SubResource("ArrayMesh_vlr8t")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_imvsx")

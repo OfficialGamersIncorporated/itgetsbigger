@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=4 uid="uid://c8ty1xrd4gkua"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8f38"]
+resource_name = "door"
+albedo_color = Color(0.656282, 0.665185, 0.699347, 1)
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vud4c"]
+resource_name = "border"
+albedo_color = Color(0.774056, 0.778868, 0.797738, 1)
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j04nj"]
+_surfaces = [{
+"aabb": AABB(-1.08, 0, -1.2, 2.16, 0.06, 2.4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIAAgADAAQABAAFAAIABAAGAAcABwAFAAQABwAGAAEAAQAAAAcA"),
+"name": "door",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAHDc/////wAAjiP/////AACOI///AAAAAHDc//8AAAAAAAAAAAAAAAD//wAAAAAAAA==")
+}, {
+"aabb": AABB(-1.08, 0, -1.2, 2.16, 0.06, 2.4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYA"),
+"name": "border",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAI4j/////wAAjiP//wAAAABw3P////8AAHDc//8AAAAA//8AAP//AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e035e"]
+resource_name = "driveway_long_Mesh driveway_long"
+_surfaces = [{
+"aabb": AABB(-1.08, 0, -1.2, 2.16, 0.06, 2.4),
+"attribute_data": PackedByteArray("//9sjgAAbI5w3L6IjiO+iI4j//+OI9kccNz//3Dc2Rz//2yOAABsjnDcvoiOI76I///ZHP////8AANkcAAD//w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYACgAIAAkACQALAAoADgAMAA0ADQAPAA4A"),
+"material": SubResource("StandardMaterial3D_v8f38"),
+"name": "door",
+"primitive": 3,
+"uv_scale": Vector4(14.1732, 17.748, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAP//AIAAAAAA//8AgHDc/////wCAjiP/////AICOI///////v44j//8AAP+/cNz//////79w3P//AAD/vwAAAAAAAP////8AAAAA//+OI///AAD//3Dc//8AAP//AAAAAAAA//8AAAAA////////AAAAAP////8AAP//////f////3////9/////f///////f////3////9/////f/9/////f////3////9/////f/8//3//P/9//z//f/8/")
+}, {
+"aabb": AABB(-1.08, 0, -1.2, 2.16, 0.06, 2.4),
+"attribute_data": PackedByteArray("/////wAA/////6vfAACr3wAAq9///6vfAAD///////8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AgAAAAEAAQADAAIABgAEAAUABQAHAAYA"),
+"material": SubResource("StandardMaterial3D_vud4c"),
+"name": "border",
+"primitive": 3,
+"uv_scale": Vector4(15.748, 15.898, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//2dAAAAAAAADZ0I4j/////9nQjiP//wAA2dBw3P/////Z0HDc//8AANnQ//8AAP//2dD//wAAAADZ0MCnfbDAp32wwKd9sMCnfbCBz8Angc/AJ4HPwCeBz8An")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_j04nj")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_53an6"]
+points = PackedVector3Array(1.08, 0, 1.2, 0.779765, 0.06, 1.2, -1.08, 0, 1.2, 1.08, 0, -1.2, 0.779765, 0.06, -1.2, -0.780188, 0.06, 1.2, -1.08, 0, -1.2, -0.780188, 0.06, -1.2)
+
+[node name="driveway_long" type="StaticBody3D"]
+
+[node name="driveway_long" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_e035e")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_53an6")

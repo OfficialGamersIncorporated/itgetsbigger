@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://cewrb7ofvf76c"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_b47jx"]
-[ext_resource type="Texture2D" uid="uid://dol5frqs1vu7l" path="res://Props/ToBeSorted/1EXPORTED/Processed/sedan-sport_colormap.png" id="2_vjtj3"]
+[ext_resource type="Texture2D" uid="uid://calgdl4kqq57m" path="res://Props/RawFiles/1EXPORTED/Processed/sedan-sport_colormap.png" id="2_vjtj3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr0a0"]
 resource_name = "colormap.010"

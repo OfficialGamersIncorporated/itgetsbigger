@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://b21ahvmsratah"]
 
 [ext_resource type="Script" path="res://Props/Prop.gd" id="1_kjkep"]
-[ext_resource type="Texture2D" uid="uid://b3wcqsi080wf6" path="res://Props/ToBeSorted/Cars/Textures/colormap.png" id="2_3h2xh"]
+[ext_resource type="Texture2D" uid="uid://dtyxonw6tsbrf" path="res://Props/RawFiles/Cars/Textures/colormap.png" id="2_3h2xh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6krh"]
 resource_name = "colormap"
