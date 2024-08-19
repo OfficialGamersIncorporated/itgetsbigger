@@ -896,7 +896,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, -53)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78529, 4, -53.2186)
 
 [node name="Checkpoint6" parent="SubCity" instance=ExtResource("24_ie8j3")]
-transform = Transform3D(73.386, 0, 0, 0, 24.4425, 0, 0, 0, 36.1709, 0.114588, 14.9124, -44.7884)
+transform = Transform3D(73.386, 0, 0, 0, 24.4425, 0, 0, 0, 36.1709, 0.114588, 16.9124, -44.7884)
 
 [node name="Island" type="Node3D" parent="."]
 

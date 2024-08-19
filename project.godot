@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ItGetsBigger"
-run/main_scene="res://Levels/TestLevel_Chris.tscn"
+run/main_scene="res://Levels/Level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
