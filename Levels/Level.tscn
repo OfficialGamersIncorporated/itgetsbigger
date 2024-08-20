@@ -152,8 +152,55 @@ environment = SubResource("Environment_kjpmy")
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Player" parent="Core" instance=ExtResource("2_p76pg")]
+[node name="Player" parent="Core" node_paths=PackedStringArray("LevelStartText", "LevelEndText", "LevelEndProp") instance=ExtResource("2_p76pg")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 2, 0)
+LevelStartText = NodePath("GameStartText")
+LevelEndText = NodePath("GameEndText")
+LevelEndProp = NodePath("../../City/Sun")
+
+[node name="GameStartText" type="RichTextLabel" parent="Core/Player"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -50.0
+offset_right = 250.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 36
+text = "I am going to make a giant snowball indoors!"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="GameEndText" type="RichTextLabel" parent="Core/Player"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(500, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -25.0
+offset_right = 250.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 36
+text = "Oops! I consumed the sun! The end."
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
 
 [node name="Floor" type="Node3D" parent="."]
 
@@ -1069,7 +1116,7 @@ transform = Transform3D(-0.0322656, 0, 0.999479, 0, 1, 0, -0.999479, 0, -0.03226
 transform = Transform3D(0.235278, 0, 0.971928, 0, 1, 0, -0.971928, 0, 0.235278, -80.942, 11.68, 90.8458)
 
 [node name="Sun" type="RigidBody3D" parent="City"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3509, 56.3627, 120.927)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3509, 79.3627, 120.927)
 freeze = true
 script = ExtResource("3_7yx5g")
 

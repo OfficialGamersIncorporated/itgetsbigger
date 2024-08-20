@@ -6,6 +6,10 @@ class_name Player
 @export var Acceleration : float = 10
 @export var FallAndRespawnHeight : float = -15
 
+@export var LevelStartText : CanvasItem
+@export var LevelEndText : CanvasItem
+@export var LevelEndProp : Prop
+
 @onready var LastCheckpoint : Vector3 = global_position
 var MoveVector : Vector2 = Vector2.ZERO
 
@@ -25,3 +29,14 @@ func _physics_process(delta: float) -> void:
 	var camForwardPlanar = camForward - camForward.project(Vector3.UP)
 	var globalVect : Vector3 = Basis.looking_at(camForwardPlanar) * Vector3(MoveVector.x, 0, -MoveVector.y)
 	apply_central_force(globalVect * Acceleration)
+
+func _ready() -> void:
+	super()
+	LevelStartText.visible = true
+	await get_tree().create_timer(5).timeout
+	LevelStartText.visible = false
+
+func ConsumeProp(other : Prop):
+	super(other)
+	if other == LevelEndProp:
+		LevelEndText.visible = true

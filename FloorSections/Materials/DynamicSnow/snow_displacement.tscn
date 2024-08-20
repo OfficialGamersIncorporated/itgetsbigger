@@ -29,3 +29,6 @@ imprintImageSize = Vector2i(16, 16)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.999562, 0, 0, 0, 0.999562, 0, 0, 0, 0.999562, 0, -0.0500876, 0)
 shape = SubResource("BoxShape3D_7yy7g")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-0.5, -0.043, -0.5, 1, 0.085, 1)

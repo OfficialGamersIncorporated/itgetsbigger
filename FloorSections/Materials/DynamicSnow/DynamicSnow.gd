@@ -1,5 +1,6 @@
 extends MeshInstance3D
 
+@onready var onScreenNotifier : VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
 @onready var area : Area3D = $Area3D
 @onready var MatInstance : ShaderMaterial #= material_override #mesh.surface_get_material(0) #get_surface_override_material(0)
 @onready var visualMesh : QuadMesh# = mesh
@@ -83,6 +84,8 @@ func _process(_delta: float) -> void:
 	pass
 
 func _physics_process(_delta: float) -> void:
+	if not onScreenNotifier.is_on_screen(): return
+	
 	var bodies = area.get_overlapping_bodies()
 	for body in bodies:
 		if not bodiesLastPositions.has(body):
