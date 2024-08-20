@@ -1,7 +1,7 @@
 extends RigidBody3D
 class_name ThingCollector
 
-@onready var visual : MeshInstance3D = $MeshInstance3D
+@onready var visual : MeshInstance3D = $Snowball
 @onready var collisionShape : CollisionShape3D = $CollisionShape3D
 @onready var collectedProps : Node3D = $CollectedProps
 
@@ -16,7 +16,7 @@ func RecalculateScale():
 	var radius = CalculateRadiusFromVolume(CurrentVolume)
 	
 	var newScale = Vector3.ONE * radius * 2
-	visual.scale = newScale
+	visual.scale = newScale / 2
 	var shape : SphereShape3D = collisionShape.shape
 	shape.radius = radius
 
